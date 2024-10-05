@@ -1,0 +1,10 @@
+name: "dbt_transformations"  # Replace with your project name
+version: "1.0"  # Project version
+profile: "emekamarkt"  # This should match the profile name in your profiles.yml
+
+# Updated the setting from source-paths to model-paths
+model-paths: ["models"]  # Directory where your models are located
+target-path: "target"  # Directory where dbt will store compiled files
+clean-targets:
+  - "target"  # Directories to be cleaned by dbt
+  - "dbt_modules"
