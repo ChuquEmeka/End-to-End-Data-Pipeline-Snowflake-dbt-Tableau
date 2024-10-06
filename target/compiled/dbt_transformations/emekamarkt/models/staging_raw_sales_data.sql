@@ -1,6 +1,6 @@
 -- models/staging_raw_sales_data.sql
 
-{{ config(materialized='view') }}
+
 
 WITH raw_data AS (
     SELECT *

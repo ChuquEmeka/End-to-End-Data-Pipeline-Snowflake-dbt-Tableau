@@ -1,6 +1,9 @@
--- models/staging_raw_sales_data.sql
 
-{{ config(materialized='view') }}
+
+  create view "dev"."public"."staging_raw_sales_data__dbt_tmp" as (
+    -- models/staging_raw_sales_data.sql
+
+
 
 WITH raw_data AS (
     SELECT *
@@ -15,3 +18,4 @@ WITH raw_data AS (
 )
 
 SELECT * FROM raw_data;
+  ) ;

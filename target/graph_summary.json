@@ -1,1 +1,1 @@
-{"_invocation_id": "5b9f56c2-63b5-491a-a9bf-363e865ebeb9", "linked": {}}
+{"_invocation_id": "7fa08a6d-2c84-42fd-90c7-c6f1f3e47a04", "linked": {"0": {"name": "model.dbt_transformations.staging_raw_sales_data", "type": "model"}}}
