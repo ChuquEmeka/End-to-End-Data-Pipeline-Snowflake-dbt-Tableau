@@ -1,0 +1,60 @@
+version: 2
+
+models:
+  # - name: dim_customer
+  #   description: "Dimension table for customer information."
+  #   columns:
+  #     - name: CUSTOMERID
+  #       tests:
+  #         - unique
+  #         - not_null
+
+  - name: dim_location
+    description: "Dimension table for location information."
+    columns:
+      - name: LocationID
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_product
+    description: "Dimension table for product information."
+    columns:
+      - name: ProductID
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_promotion
+    description: "Dimension table for promotion information."
+    columns:
+      - name: PromotionID
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_review
+    description: "Dimension table for review information."
+    columns:
+      - name: ReviewID
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_shipping
+    description: "Dimension table for shipping information."
+    columns:
+      - name: ShippingID
+        tests:
+          - unique
+          - not_null
+
+  - name: fact_sales
+    description: "Fact table for sales data."
+    columns:
+      - name: SaleID
+        tests:
+          - unique
+          - not_null
+      
+
