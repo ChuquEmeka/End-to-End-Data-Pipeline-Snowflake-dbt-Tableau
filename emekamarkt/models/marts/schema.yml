@@ -1,13 +1,13 @@
 version: 2
 
 models:
-  # - name: dim_customer
-  #   description: "Dimension table for customer information."
-  #   columns:
-  #     - name: CUSTOMERID
-  #       tests:
-  #         - unique
-  #         - not_null
+  - name: dim_customer
+    description: "Dimension table for customer information."
+    columns:
+      - name: CUSTOMERID
+        tests:
+          - unique
+          - not_null
 
   - name: dim_location
     description: "Dimension table for location information."

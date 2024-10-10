@@ -16381,3 +16381,528 @@ JOIN product_data p
 [0m10:35:07.398551 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014D8F0363E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014D903A6F20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014D91DD0D30>]}
 [0m10:35:07.398551 [debug] [MainThread]: Flushing usage events
 [0m10:35:08.005247 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:41:13.234285 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018C12696380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018C145BD240>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018C145BD060>]}
+
+
+============================== 10:41:13.234285 | 92e820f6-03be-4caf-932b-32e32ea3631a ==============================
+[0m10:41:13.234285 [info ] [MainThread]: Running with dbt=1.9.0-b1
+[0m10:41:13.234285 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\User\\.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'C:\\Users\\User\\Desktop\\dbt-Transformations\\logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt test', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m10:41:13.817574 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '92e820f6-03be-4caf-932b-32e32ea3631a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018C15327670>]}
+[0m10:41:13.864524 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '92e820f6-03be-4caf-932b-32e32ea3631a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018C1526FBB0>]}
+[0m10:41:13.880213 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m10:41:13.880213 [debug] [MainThread]: checksum: 342eadeaabeb3b1e51584f606df2b5b2518c39ec1d5d83f52b4bb1c68a4f38ed, vars: {}, profile: , target: , version: 1.9.0b1
+[0m10:41:14.115867 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m10:41:14.115867 [debug] [MainThread]: Partial parsing: updated file: dbt_transformations://emekamarkt/models\marts\schema.yml
+[0m10:41:14.390564 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '92e820f6-03be-4caf-932b-32e32ea3631a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018C167954E0>]}
+[0m10:41:14.563383 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '92e820f6-03be-4caf-932b-32e32ea3631a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018C16797700>]}
+[0m10:41:14.563383 [info ] [MainThread]: Found 8 models, 14 data tests, 1 source, 454 macros
+[0m10:41:14.563383 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '92e820f6-03be-4caf-932b-32e32ea3631a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018C167940D0>]}
+[0m10:41:14.563383 [info ] [MainThread]: 
+[0m10:41:14.578988 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m10:41:14.579983 [info ] [MainThread]: 
+[0m10:41:14.581910 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m10:41:14.588765 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_EMEKA_MARKET_DATA_RAW_SALES_DATA'
+[0m10:41:14.597223 [debug] [ThreadPool]: Using snowflake connection "list_EMEKA_MARKET_DATA_RAW_SALES_DATA"
+[0m10:41:14.597223 [debug] [ThreadPool]: On list_EMEKA_MARKET_DATA_RAW_SALES_DATA: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "connection_name": "list_EMEKA_MARKET_DATA_RAW_SALES_DATA"} */
+show objects in EMEKA_MARKET_DATA.RAW_SALES_DATA limit 10000
+[0m10:41:14.597223 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:41:15.514780 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 0.920 seconds
+[0m10:41:15.530407 [debug] [ThreadPool]: On list_EMEKA_MARKET_DATA_RAW_SALES_DATA: Close
+[0m10:41:15.641709 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '92e820f6-03be-4caf-932b-32e32ea3631a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018C167943D0>]}
+[0m10:41:15.641709 [debug] [Thread-1 (]: Began running node test.dbt_transformations.not_null_dim_customer_CUSTOMERID.de260112ff
+[0m10:41:15.641709 [info ] [Thread-1 (]: 1 of 14 START test not_null_dim_customer_CUSTOMERID ............................ [RUN]
+[0m10:41:15.641709 [debug] [Thread-1 (]: Acquiring new snowflake connection 'test.dbt_transformations.not_null_dim_customer_CUSTOMERID.de260112ff'
+[0m10:41:15.641709 [debug] [Thread-1 (]: Began compiling node test.dbt_transformations.not_null_dim_customer_CUSTOMERID.de260112ff
+[0m10:41:15.655966 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_transformations.not_null_dim_customer_CUSTOMERID.de260112ff"
+[0m10:41:15.674089 [debug] [Thread-1 (]: Began executing node test.dbt_transformations.not_null_dim_customer_CUSTOMERID.de260112ff
+[0m10:41:15.696126 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_transformations.not_null_dim_customer_CUSTOMERID.de260112ff"
+[0m10:41:15.698163 [debug] [Thread-1 (]: Using snowflake connection "test.dbt_transformations.not_null_dim_customer_CUSTOMERID.de260112ff"
+[0m10:41:15.699165 [debug] [Thread-1 (]: On test.dbt_transformations.not_null_dim_customer_CUSTOMERID.de260112ff: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "test.dbt_transformations.not_null_dim_customer_CUSTOMERID.de260112ff"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select CUSTOMERID
+from EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_customer
+where CUSTOMERID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m10:41:15.699165 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m10:41:16.335906 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.643 seconds
+[0m10:41:16.355616 [debug] [Thread-1 (]: On test.dbt_transformations.not_null_dim_customer_CUSTOMERID.de260112ff: Close
+[0m10:41:16.483354 [info ] [Thread-1 (]: 1 of 14 PASS not_null_dim_customer_CUSTOMERID .................................. [[32mPASS[0m in 0.84s]
+[0m10:41:16.483354 [debug] [Thread-1 (]: Finished running node test.dbt_transformations.not_null_dim_customer_CUSTOMERID.de260112ff
+[0m10:41:16.483354 [debug] [Thread-1 (]: Began running node test.dbt_transformations.not_null_dim_location_LocationID.85a6e4f060
+[0m10:41:16.483354 [info ] [Thread-1 (]: 2 of 14 START test not_null_dim_location_LocationID ............................ [RUN]
+[0m10:41:16.483354 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_transformations.not_null_dim_customer_CUSTOMERID.de260112ff, now test.dbt_transformations.not_null_dim_location_LocationID.85a6e4f060)
+[0m10:41:16.483354 [debug] [Thread-1 (]: Began compiling node test.dbt_transformations.not_null_dim_location_LocationID.85a6e4f060
+[0m10:41:16.501399 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_transformations.not_null_dim_location_LocationID.85a6e4f060"
+[0m10:41:16.503434 [debug] [Thread-1 (]: Began executing node test.dbt_transformations.not_null_dim_location_LocationID.85a6e4f060
+[0m10:41:16.505474 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_transformations.not_null_dim_location_LocationID.85a6e4f060"
+[0m10:41:16.505474 [debug] [Thread-1 (]: Using snowflake connection "test.dbt_transformations.not_null_dim_location_LocationID.85a6e4f060"
+[0m10:41:16.505474 [debug] [Thread-1 (]: On test.dbt_transformations.not_null_dim_location_LocationID.85a6e4f060: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "test.dbt_transformations.not_null_dim_location_LocationID.85a6e4f060"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select LocationID
+from EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_location
+where LocationID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m10:41:16.505474 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:41:17.116011 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.601 seconds
+[0m10:41:17.116011 [debug] [Thread-1 (]: On test.dbt_transformations.not_null_dim_location_LocationID.85a6e4f060: Close
+[0m10:41:17.230266 [info ] [Thread-1 (]: 2 of 14 PASS not_null_dim_location_LocationID .................................. [[32mPASS[0m in 0.74s]
+[0m10:41:17.232161 [debug] [Thread-1 (]: Finished running node test.dbt_transformations.not_null_dim_location_LocationID.85a6e4f060
+[0m10:41:17.232161 [debug] [Thread-1 (]: Began running node test.dbt_transformations.not_null_dim_product_ProductID.70d7926aa0
+[0m10:41:17.234295 [info ] [Thread-1 (]: 3 of 14 START test not_null_dim_product_ProductID .............................. [RUN]
+[0m10:41:17.234295 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_transformations.not_null_dim_location_LocationID.85a6e4f060, now test.dbt_transformations.not_null_dim_product_ProductID.70d7926aa0)
+[0m10:41:17.236719 [debug] [Thread-1 (]: Began compiling node test.dbt_transformations.not_null_dim_product_ProductID.70d7926aa0
+[0m10:41:17.245302 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_transformations.not_null_dim_product_ProductID.70d7926aa0"
+[0m10:41:17.246340 [debug] [Thread-1 (]: Began executing node test.dbt_transformations.not_null_dim_product_ProductID.70d7926aa0
+[0m10:41:17.253854 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_transformations.not_null_dim_product_ProductID.70d7926aa0"
+[0m10:41:17.259694 [debug] [Thread-1 (]: Using snowflake connection "test.dbt_transformations.not_null_dim_product_ProductID.70d7926aa0"
+[0m10:41:17.260686 [debug] [Thread-1 (]: On test.dbt_transformations.not_null_dim_product_ProductID.70d7926aa0: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "test.dbt_transformations.not_null_dim_product_ProductID.70d7926aa0"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select ProductID
+from EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_product
+where ProductID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m10:41:17.261686 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:41:17.925946 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.665 seconds
+[0m10:41:17.929940 [debug] [Thread-1 (]: On test.dbt_transformations.not_null_dim_product_ProductID.70d7926aa0: Close
+[0m10:41:18.039555 [info ] [Thread-1 (]: 3 of 14 PASS not_null_dim_product_ProductID .................................... [[32mPASS[0m in 0.81s]
+[0m10:41:18.039555 [debug] [Thread-1 (]: Finished running node test.dbt_transformations.not_null_dim_product_ProductID.70d7926aa0
+[0m10:41:18.046152 [debug] [Thread-1 (]: Began running node test.dbt_transformations.not_null_dim_promotion_PromotionID.85de2a4b57
+[0m10:41:18.046152 [info ] [Thread-1 (]: 4 of 14 START test not_null_dim_promotion_PromotionID .......................... [RUN]
+[0m10:41:18.049311 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_transformations.not_null_dim_product_ProductID.70d7926aa0, now test.dbt_transformations.not_null_dim_promotion_PromotionID.85de2a4b57)
+[0m10:41:18.049311 [debug] [Thread-1 (]: Began compiling node test.dbt_transformations.not_null_dim_promotion_PromotionID.85de2a4b57
+[0m10:41:18.058257 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_transformations.not_null_dim_promotion_PromotionID.85de2a4b57"
+[0m10:41:18.059641 [debug] [Thread-1 (]: Began executing node test.dbt_transformations.not_null_dim_promotion_PromotionID.85de2a4b57
+[0m10:41:18.068801 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_transformations.not_null_dim_promotion_PromotionID.85de2a4b57"
+[0m10:41:18.070793 [debug] [Thread-1 (]: Using snowflake connection "test.dbt_transformations.not_null_dim_promotion_PromotionID.85de2a4b57"
+[0m10:41:18.071786 [debug] [Thread-1 (]: On test.dbt_transformations.not_null_dim_promotion_PromotionID.85de2a4b57: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "test.dbt_transformations.not_null_dim_promotion_PromotionID.85de2a4b57"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select PromotionID
+from EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_promotion
+where PromotionID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m10:41:18.072846 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:41:18.874486 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.810 seconds
+[0m10:41:18.874486 [debug] [Thread-1 (]: On test.dbt_transformations.not_null_dim_promotion_PromotionID.85de2a4b57: Close
+[0m10:41:19.014742 [info ] [Thread-1 (]: 4 of 14 PASS not_null_dim_promotion_PromotionID ................................ [[32mPASS[0m in 0.97s]
+[0m10:41:19.018699 [debug] [Thread-1 (]: Finished running node test.dbt_transformations.not_null_dim_promotion_PromotionID.85de2a4b57
+[0m10:41:19.019736 [debug] [Thread-1 (]: Began running node test.dbt_transformations.not_null_dim_review_ReviewID.2ed03a9f7b
+[0m10:41:19.021646 [info ] [Thread-1 (]: 5 of 14 START test not_null_dim_review_ReviewID ................................ [RUN]
+[0m10:41:19.023166 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_transformations.not_null_dim_promotion_PromotionID.85de2a4b57, now test.dbt_transformations.not_null_dim_review_ReviewID.2ed03a9f7b)
+[0m10:41:19.027572 [debug] [Thread-1 (]: Began compiling node test.dbt_transformations.not_null_dim_review_ReviewID.2ed03a9f7b
+[0m10:41:19.030738 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_transformations.not_null_dim_review_ReviewID.2ed03a9f7b"
+[0m10:41:19.045677 [debug] [Thread-1 (]: Began executing node test.dbt_transformations.not_null_dim_review_ReviewID.2ed03a9f7b
+[0m10:41:19.049805 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_transformations.not_null_dim_review_ReviewID.2ed03a9f7b"
+[0m10:41:19.049805 [debug] [Thread-1 (]: Using snowflake connection "test.dbt_transformations.not_null_dim_review_ReviewID.2ed03a9f7b"
+[0m10:41:19.049805 [debug] [Thread-1 (]: On test.dbt_transformations.not_null_dim_review_ReviewID.2ed03a9f7b: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "test.dbt_transformations.not_null_dim_review_ReviewID.2ed03a9f7b"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select ReviewID
+from EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_review
+where ReviewID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m10:41:19.049805 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:41:19.793760 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.751 seconds
+[0m10:41:19.809333 [debug] [Thread-1 (]: On test.dbt_transformations.not_null_dim_review_ReviewID.2ed03a9f7b: Close
+[0m10:41:19.903951 [info ] [Thread-1 (]: 5 of 14 PASS not_null_dim_review_ReviewID ...................................... [[32mPASS[0m in 0.88s]
+[0m10:41:19.903951 [debug] [Thread-1 (]: Finished running node test.dbt_transformations.not_null_dim_review_ReviewID.2ed03a9f7b
+[0m10:41:19.903951 [debug] [Thread-1 (]: Began running node test.dbt_transformations.not_null_dim_shipping_ShippingID.8bf32c6b09
+[0m10:41:19.918957 [info ] [Thread-1 (]: 6 of 14 START test not_null_dim_shipping_ShippingID ............................ [RUN]
+[0m10:41:19.918957 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_transformations.not_null_dim_review_ReviewID.2ed03a9f7b, now test.dbt_transformations.not_null_dim_shipping_ShippingID.8bf32c6b09)
+[0m10:41:19.918957 [debug] [Thread-1 (]: Began compiling node test.dbt_transformations.not_null_dim_shipping_ShippingID.8bf32c6b09
+[0m10:41:19.918957 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_transformations.not_null_dim_shipping_ShippingID.8bf32c6b09"
+[0m10:41:19.918957 [debug] [Thread-1 (]: Began executing node test.dbt_transformations.not_null_dim_shipping_ShippingID.8bf32c6b09
+[0m10:41:19.918957 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_transformations.not_null_dim_shipping_ShippingID.8bf32c6b09"
+[0m10:41:19.918957 [debug] [Thread-1 (]: Using snowflake connection "test.dbt_transformations.not_null_dim_shipping_ShippingID.8bf32c6b09"
+[0m10:41:19.918957 [debug] [Thread-1 (]: On test.dbt_transformations.not_null_dim_shipping_ShippingID.8bf32c6b09: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "test.dbt_transformations.not_null_dim_shipping_ShippingID.8bf32c6b09"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select ShippingID
+from EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_shipping
+where ShippingID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m10:41:19.918957 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:41:20.538926 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.617 seconds
+[0m10:41:20.554529 [debug] [Thread-1 (]: On test.dbt_transformations.not_null_dim_shipping_ShippingID.8bf32c6b09: Close
+[0m10:41:20.651720 [info ] [Thread-1 (]: 6 of 14 PASS not_null_dim_shipping_ShippingID .................................. [[32mPASS[0m in 0.73s]
+[0m10:41:20.651720 [debug] [Thread-1 (]: Finished running node test.dbt_transformations.not_null_dim_shipping_ShippingID.8bf32c6b09
+[0m10:41:20.651720 [debug] [Thread-1 (]: Began running node test.dbt_transformations.not_null_fact_sales_SaleID.54675be502
+[0m10:41:20.667350 [info ] [Thread-1 (]: 7 of 14 START test not_null_fact_sales_SaleID .................................. [RUN]
+[0m10:41:20.667350 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_transformations.not_null_dim_shipping_ShippingID.8bf32c6b09, now test.dbt_transformations.not_null_fact_sales_SaleID.54675be502)
+[0m10:41:20.667350 [debug] [Thread-1 (]: Began compiling node test.dbt_transformations.not_null_fact_sales_SaleID.54675be502
+[0m10:41:20.667350 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_transformations.not_null_fact_sales_SaleID.54675be502"
+[0m10:41:20.667350 [debug] [Thread-1 (]: Began executing node test.dbt_transformations.not_null_fact_sales_SaleID.54675be502
+[0m10:41:20.667350 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_transformations.not_null_fact_sales_SaleID.54675be502"
+[0m10:41:20.684806 [debug] [Thread-1 (]: Using snowflake connection "test.dbt_transformations.not_null_fact_sales_SaleID.54675be502"
+[0m10:41:20.685815 [debug] [Thread-1 (]: On test.dbt_transformations.not_null_fact_sales_SaleID.54675be502: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "test.dbt_transformations.not_null_fact_sales_SaleID.54675be502"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select SaleID
+from EMEKA_MARKET_DATA.RAW_SALES_DATA.fact_sales
+where SaleID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m10:41:20.686819 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:41:21.277926 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.594 seconds
+[0m10:41:21.277926 [debug] [Thread-1 (]: On test.dbt_transformations.not_null_fact_sales_SaleID.54675be502: Close
+[0m10:41:21.625064 [info ] [Thread-1 (]: 7 of 14 PASS not_null_fact_sales_SaleID ........................................ [[32mPASS[0m in 0.96s]
+[0m10:41:21.625064 [debug] [Thread-1 (]: Finished running node test.dbt_transformations.not_null_fact_sales_SaleID.54675be502
+[0m10:41:21.625064 [debug] [Thread-1 (]: Began running node test.dbt_transformations.unique_dim_customer_CUSTOMERID.eac252d826
+[0m10:41:21.625064 [info ] [Thread-1 (]: 8 of 14 START test unique_dim_customer_CUSTOMERID .............................. [RUN]
+[0m10:41:21.625064 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_transformations.not_null_fact_sales_SaleID.54675be502, now test.dbt_transformations.unique_dim_customer_CUSTOMERID.eac252d826)
+[0m10:41:21.625064 [debug] [Thread-1 (]: Began compiling node test.dbt_transformations.unique_dim_customer_CUSTOMERID.eac252d826
+[0m10:41:21.640071 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_transformations.unique_dim_customer_CUSTOMERID.eac252d826"
+[0m10:41:21.641824 [debug] [Thread-1 (]: Began executing node test.dbt_transformations.unique_dim_customer_CUSTOMERID.eac252d826
+[0m10:41:21.644848 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_transformations.unique_dim_customer_CUSTOMERID.eac252d826"
+[0m10:41:21.646829 [debug] [Thread-1 (]: Using snowflake connection "test.dbt_transformations.unique_dim_customer_CUSTOMERID.eac252d826"
+[0m10:41:21.649211 [debug] [Thread-1 (]: On test.dbt_transformations.unique_dim_customer_CUSTOMERID.eac252d826: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "test.dbt_transformations.unique_dim_customer_CUSTOMERID.eac252d826"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    CUSTOMERID as unique_field,
+    count(*) as n_records
+
+from EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_customer
+where CUSTOMERID is not null
+group by CUSTOMERID
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m10:41:21.650408 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:41:22.288397 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.649 seconds
+[0m10:41:22.288397 [debug] [Thread-1 (]: On test.dbt_transformations.unique_dim_customer_CUSTOMERID.eac252d826: Close
+[0m10:41:22.413409 [info ] [Thread-1 (]: 8 of 14 PASS unique_dim_customer_CUSTOMERID .................................... [[32mPASS[0m in 0.79s]
+[0m10:41:22.413409 [debug] [Thread-1 (]: Finished running node test.dbt_transformations.unique_dim_customer_CUSTOMERID.eac252d826
+[0m10:41:22.413409 [debug] [Thread-1 (]: Began running node test.dbt_transformations.unique_dim_location_LocationID.03e0e3743d
+[0m10:41:22.428886 [info ] [Thread-1 (]: 9 of 14 START test unique_dim_location_LocationID .............................. [RUN]
+[0m10:41:22.430795 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_transformations.unique_dim_customer_CUSTOMERID.eac252d826, now test.dbt_transformations.unique_dim_location_LocationID.03e0e3743d)
+[0m10:41:22.431762 [debug] [Thread-1 (]: Began compiling node test.dbt_transformations.unique_dim_location_LocationID.03e0e3743d
+[0m10:41:22.435513 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_transformations.unique_dim_location_LocationID.03e0e3743d"
+[0m10:41:22.435513 [debug] [Thread-1 (]: Began executing node test.dbt_transformations.unique_dim_location_LocationID.03e0e3743d
+[0m10:41:22.435513 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_transformations.unique_dim_location_LocationID.03e0e3743d"
+[0m10:41:22.435513 [debug] [Thread-1 (]: Using snowflake connection "test.dbt_transformations.unique_dim_location_LocationID.03e0e3743d"
+[0m10:41:22.435513 [debug] [Thread-1 (]: On test.dbt_transformations.unique_dim_location_LocationID.03e0e3743d: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "test.dbt_transformations.unique_dim_location_LocationID.03e0e3743d"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    LocationID as unique_field,
+    count(*) as n_records
+
+from EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_location
+where LocationID is not null
+group by LocationID
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m10:41:22.450067 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:41:23.075879 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.625 seconds
+[0m10:41:23.075879 [debug] [Thread-1 (]: On test.dbt_transformations.unique_dim_location_LocationID.03e0e3743d: Close
+[0m10:41:23.185811 [info ] [Thread-1 (]: 9 of 14 PASS unique_dim_location_LocationID .................................... [[32mPASS[0m in 0.76s]
+[0m10:41:23.185811 [debug] [Thread-1 (]: Finished running node test.dbt_transformations.unique_dim_location_LocationID.03e0e3743d
+[0m10:41:23.185811 [debug] [Thread-1 (]: Began running node test.dbt_transformations.unique_dim_product_ProductID.c7b837bf0d
+[0m10:41:23.185811 [info ] [Thread-1 (]: 10 of 14 START test unique_dim_product_ProductID ............................... [RUN]
+[0m10:41:23.201381 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_transformations.unique_dim_location_LocationID.03e0e3743d, now test.dbt_transformations.unique_dim_product_ProductID.c7b837bf0d)
+[0m10:41:23.201381 [debug] [Thread-1 (]: Began compiling node test.dbt_transformations.unique_dim_product_ProductID.c7b837bf0d
+[0m10:41:23.201381 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_transformations.unique_dim_product_ProductID.c7b837bf0d"
+[0m10:41:23.201381 [debug] [Thread-1 (]: Began executing node test.dbt_transformations.unique_dim_product_ProductID.c7b837bf0d
+[0m10:41:23.218166 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_transformations.unique_dim_product_ProductID.c7b837bf0d"
+[0m10:41:23.221352 [debug] [Thread-1 (]: Using snowflake connection "test.dbt_transformations.unique_dim_product_ProductID.c7b837bf0d"
+[0m10:41:23.222349 [debug] [Thread-1 (]: On test.dbt_transformations.unique_dim_product_ProductID.c7b837bf0d: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "test.dbt_transformations.unique_dim_product_ProductID.c7b837bf0d"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    ProductID as unique_field,
+    count(*) as n_records
+
+from EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_product
+where ProductID is not null
+group by ProductID
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m10:41:23.222349 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:41:23.809084 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.601 seconds
+[0m10:41:23.824826 [debug] [Thread-1 (]: On test.dbt_transformations.unique_dim_product_ProductID.c7b837bf0d: Close
+[0m10:41:23.934656 [info ] [Thread-1 (]: 10 of 14 PASS unique_dim_product_ProductID ..................................... [[32mPASS[0m in 0.73s]
+[0m10:41:23.950279 [debug] [Thread-1 (]: Finished running node test.dbt_transformations.unique_dim_product_ProductID.c7b837bf0d
+[0m10:41:23.950279 [debug] [Thread-1 (]: Began running node test.dbt_transformations.unique_dim_promotion_PromotionID.0c5046d383
+[0m10:41:23.950279 [info ] [Thread-1 (]: 11 of 14 START test unique_dim_promotion_PromotionID ........................... [RUN]
+[0m10:41:23.950279 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_transformations.unique_dim_product_ProductID.c7b837bf0d, now test.dbt_transformations.unique_dim_promotion_PromotionID.0c5046d383)
+[0m10:41:23.957536 [debug] [Thread-1 (]: Began compiling node test.dbt_transformations.unique_dim_promotion_PromotionID.0c5046d383
+[0m10:41:23.963273 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_transformations.unique_dim_promotion_PromotionID.0c5046d383"
+[0m10:41:23.963273 [debug] [Thread-1 (]: Began executing node test.dbt_transformations.unique_dim_promotion_PromotionID.0c5046d383
+[0m10:41:23.963273 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_transformations.unique_dim_promotion_PromotionID.0c5046d383"
+[0m10:41:23.963273 [debug] [Thread-1 (]: Using snowflake connection "test.dbt_transformations.unique_dim_promotion_PromotionID.0c5046d383"
+[0m10:41:23.963273 [debug] [Thread-1 (]: On test.dbt_transformations.unique_dim_promotion_PromotionID.0c5046d383: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "test.dbt_transformations.unique_dim_promotion_PromotionID.0c5046d383"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    PromotionID as unique_field,
+    count(*) as n_records
+
+from EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_promotion
+where PromotionID is not null
+group by PromotionID
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m10:41:23.963273 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:41:24.675869 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.715 seconds
+[0m10:41:24.691575 [debug] [Thread-1 (]: On test.dbt_transformations.unique_dim_promotion_PromotionID.0c5046d383: Close
+[0m10:41:24.801834 [info ] [Thread-1 (]: 11 of 14 PASS unique_dim_promotion_PromotionID ................................. [[32mPASS[0m in 0.85s]
+[0m10:41:24.801834 [debug] [Thread-1 (]: Finished running node test.dbt_transformations.unique_dim_promotion_PromotionID.0c5046d383
+[0m10:41:24.801834 [debug] [Thread-1 (]: Began running node test.dbt_transformations.unique_dim_review_ReviewID.056ef0d8d2
+[0m10:41:24.801834 [info ] [Thread-1 (]: 12 of 14 START test unique_dim_review_ReviewID ................................. [RUN]
+[0m10:41:24.801834 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_transformations.unique_dim_promotion_PromotionID.0c5046d383, now test.dbt_transformations.unique_dim_review_ReviewID.056ef0d8d2)
+[0m10:41:24.801834 [debug] [Thread-1 (]: Began compiling node test.dbt_transformations.unique_dim_review_ReviewID.056ef0d8d2
+[0m10:41:24.859068 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_transformations.unique_dim_review_ReviewID.056ef0d8d2"
+[0m10:41:24.859068 [debug] [Thread-1 (]: Began executing node test.dbt_transformations.unique_dim_review_ReviewID.056ef0d8d2
+[0m10:41:24.859068 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_transformations.unique_dim_review_ReviewID.056ef0d8d2"
+[0m10:41:24.859068 [debug] [Thread-1 (]: Using snowflake connection "test.dbt_transformations.unique_dim_review_ReviewID.056ef0d8d2"
+[0m10:41:24.874107 [debug] [Thread-1 (]: On test.dbt_transformations.unique_dim_review_ReviewID.056ef0d8d2: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "test.dbt_transformations.unique_dim_review_ReviewID.056ef0d8d2"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    ReviewID as unique_field,
+    count(*) as n_records
+
+from EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_review
+where ReviewID is not null
+group by ReviewID
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m10:41:24.874107 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:41:25.549198 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.677 seconds
+[0m10:41:25.549198 [debug] [Thread-1 (]: On test.dbt_transformations.unique_dim_review_ReviewID.056ef0d8d2: Close
+[0m10:41:25.658862 [info ] [Thread-1 (]: 12 of 14 PASS unique_dim_review_ReviewID ....................................... [[32mPASS[0m in 0.86s]
+[0m10:41:25.658862 [debug] [Thread-1 (]: Finished running node test.dbt_transformations.unique_dim_review_ReviewID.056ef0d8d2
+[0m10:41:25.658862 [debug] [Thread-1 (]: Began running node test.dbt_transformations.unique_dim_shipping_ShippingID.71b80a8d63
+[0m10:41:25.658862 [info ] [Thread-1 (]: 13 of 14 START test unique_dim_shipping_ShippingID ............................. [RUN]
+[0m10:41:25.658862 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_transformations.unique_dim_review_ReviewID.056ef0d8d2, now test.dbt_transformations.unique_dim_shipping_ShippingID.71b80a8d63)
+[0m10:41:25.658862 [debug] [Thread-1 (]: Began compiling node test.dbt_transformations.unique_dim_shipping_ShippingID.71b80a8d63
+[0m10:41:25.674513 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_transformations.unique_dim_shipping_ShippingID.71b80a8d63"
+[0m10:41:25.674513 [debug] [Thread-1 (]: Began executing node test.dbt_transformations.unique_dim_shipping_ShippingID.71b80a8d63
+[0m10:41:25.674513 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_transformations.unique_dim_shipping_ShippingID.71b80a8d63"
+[0m10:41:25.674513 [debug] [Thread-1 (]: Using snowflake connection "test.dbt_transformations.unique_dim_shipping_ShippingID.71b80a8d63"
+[0m10:41:25.690223 [debug] [Thread-1 (]: On test.dbt_transformations.unique_dim_shipping_ShippingID.71b80a8d63: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "test.dbt_transformations.unique_dim_shipping_ShippingID.71b80a8d63"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    ShippingID as unique_field,
+    count(*) as n_records
+
+from EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_shipping
+where ShippingID is not null
+group by ShippingID
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m10:41:25.691377 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:41:26.455216 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.766 seconds
+[0m10:41:26.455216 [debug] [Thread-1 (]: On test.dbt_transformations.unique_dim_shipping_ShippingID.71b80a8d63: Close
+[0m10:41:26.564798 [info ] [Thread-1 (]: 13 of 14 PASS unique_dim_shipping_ShippingID ................................... [[32mPASS[0m in 0.91s]
+[0m10:41:26.580341 [debug] [Thread-1 (]: Finished running node test.dbt_transformations.unique_dim_shipping_ShippingID.71b80a8d63
+[0m10:41:26.580341 [debug] [Thread-1 (]: Began running node test.dbt_transformations.unique_fact_sales_SaleID.4dff664d13
+[0m10:41:26.580341 [info ] [Thread-1 (]: 14 of 14 START test unique_fact_sales_SaleID ................................... [RUN]
+[0m10:41:26.586579 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_transformations.unique_dim_shipping_ShippingID.71b80a8d63, now test.dbt_transformations.unique_fact_sales_SaleID.4dff664d13)
+[0m10:41:26.586579 [debug] [Thread-1 (]: Began compiling node test.dbt_transformations.unique_fact_sales_SaleID.4dff664d13
+[0m10:41:26.592194 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_transformations.unique_fact_sales_SaleID.4dff664d13"
+[0m10:41:26.592194 [debug] [Thread-1 (]: Began executing node test.dbt_transformations.unique_fact_sales_SaleID.4dff664d13
+[0m10:41:26.604444 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_transformations.unique_fact_sales_SaleID.4dff664d13"
+[0m10:41:26.606347 [debug] [Thread-1 (]: Using snowflake connection "test.dbt_transformations.unique_fact_sales_SaleID.4dff664d13"
+[0m10:41:26.607345 [debug] [Thread-1 (]: On test.dbt_transformations.unique_fact_sales_SaleID.4dff664d13: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "test.dbt_transformations.unique_fact_sales_SaleID.4dff664d13"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    SaleID as unique_field,
+    count(*) as n_records
+
+from EMEKA_MARKET_DATA.RAW_SALES_DATA.fact_sales
+where SaleID is not null
+group by SaleID
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m10:41:26.608348 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:41:27.229486 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.635 seconds
+[0m10:41:27.245132 [debug] [Thread-1 (]: On test.dbt_transformations.unique_fact_sales_SaleID.4dff664d13: Close
+[0m10:41:27.339454 [info ] [Thread-1 (]: 14 of 14 PASS unique_fact_sales_SaleID ......................................... [[32mPASS[0m in 0.76s]
+[0m10:41:27.355918 [debug] [Thread-1 (]: Finished running node test.dbt_transformations.unique_fact_sales_SaleID.4dff664d13
+[0m10:41:27.355918 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:41:27.355918 [debug] [MainThread]: Connection 'list_EMEKA_MARKET_DATA_RAW_SALES_DATA' was properly closed.
+[0m10:41:27.355918 [debug] [MainThread]: Connection 'test.dbt_transformations.unique_fact_sales_SaleID.4dff664d13' was properly closed.
+[0m10:41:27.355918 [info ] [MainThread]: 
+[0m10:41:27.355918 [info ] [MainThread]: Finished running 14 data tests in 0 hours 0 minutes and 12.77 seconds (12.77s).
+[0m10:41:27.370324 [debug] [MainThread]: Command end result
+[0m10:41:27.405943 [info ] [MainThread]: 
+[0m10:41:27.405943 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m10:41:27.405943 [info ] [MainThread]: 
+[0m10:41:27.405943 [info ] [MainThread]: Done. PASS=14 WARN=0 ERROR=0 SKIP=0 TOTAL=14
+[0m10:41:27.405943 [debug] [MainThread]: Command `dbt test` succeeded at 10:41:27.405943 after 14.26 seconds
+[0m10:41:27.405943 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018C12696380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018C12587B20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018C13A07070>]}
+[0m10:41:27.405943 [debug] [MainThread]: Flushing usage events
+[0m10:41:27.900809 [debug] [MainThread]: An error was encountered while trying to flush usage events
