@@ -1,15 +1,15 @@
 # dbt_project.yml
 
-name: 'dbt_transformations'  # Changed name to use underscores
+name: 'dbt_transformations'  
 version: '1.0.0'
-profile: 'emekamarkt'  # This refers to the profile name in your profiles.yml
+profile: 'emekamarkt'  # This refers to the profile name in my profiles.yml
 
 # The directory where dbt will look for models
 model-paths: ['emekamarkt/models']
 
 # Configuring the marts folder and default materialization
 models:
-  dbt_transformations:  # The name of your project must match the 'name' above
+  dbt_transformations:  # The name of my project must match the 'name' above
   
     marts:
       +materialized: view  # You can change this to 'table' if you'd prefer tables
