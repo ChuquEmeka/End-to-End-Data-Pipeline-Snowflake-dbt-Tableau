@@ -17,7 +17,8 @@ WITH customer_data AS (
     LATERAL FLATTEN(input => Customer) AS c
 )
 
-SELECT DISTINCT (CustomerID)  
+SELECT DISTINCT
+    CustomerID,  
     CustomerName, 
     Email, 
     PhoneNumber, 
