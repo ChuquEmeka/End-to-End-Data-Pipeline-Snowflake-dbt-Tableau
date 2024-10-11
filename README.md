@@ -93,8 +93,9 @@ The use of incremental models is crucial for several reasons:
 
 This approach enhances the overall efficiency and effectiveness of the data pipeline.
 
-**Key dbt Models**: [dbt nodels](./emekamarkt/models/marts)  
+**Key dbt Models**: [The dbt models can be found here](./emekamarkt/models/marts)    
 ![dbt test](images/dbt-test.png)  
+    
 ![dbt test](images/dbt-run.png)
 
 ---

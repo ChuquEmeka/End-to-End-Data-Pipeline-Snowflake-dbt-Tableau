@@ -4,7 +4,7 @@
 ) }}
 
 WITH sales_data AS (
-    -- Get the necessary fields from the raw sales data
+    -- Getting the necessary fields from the raw sales data
     SELECT
         SaleID,
         Quantity,
@@ -23,7 +23,7 @@ WITH sales_data AS (
 ),
 
 product_data AS (
-    -- Get the necessary fields from the product dimension table
+    -- Getting the necessary fields from the product dimension table
     SELECT
         p.ProductID,
         p.UnitCost,
@@ -31,7 +31,7 @@ product_data AS (
     FROM {{ ref('dim_product') }} AS p
 )
 
--- Join the sales data with the product data to calculate total cost, revenue, and profit
+-- Joining the sales data with the product data to calculate total cost, revenue, and profit
 SELECT 
     s.SaleID,
     s.Quantity,
