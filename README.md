@@ -65,7 +65,8 @@ Once the data is stored in S3, Snowflake is used as the data warehouse to stage 
 2. **Copy data from S3**: Snowflake’s COPY INTO command is used to ingest the data from the S3 bucket into the staging table.
 3. **Validation**: After loading, data integrity checks are performed to ensure successful ingestion.
 
-**Snowflake Outputs**: [Transformed Fact and Dimension Tables in Snowflake](Snowflake/Transformed-Data-In-Snowflake.png)
+**Snowflake Outputs**:  
+![Transformed Fact and Dimension Tables in Snowflake](Snowflake/Transformed-Data-In-Snowflake.png)
 
 ---
 
