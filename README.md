@@ -147,7 +147,6 @@ The project provided several actionable business insights, such as:
 - **Profit trends**: Observing fluctuations in profit over time to detect seasonality or market shifts.
 
 These insights were directly derived from the **live dashboard**, which continuously reflects changes in the data.
-
 ---
 
 ### Automation with GitHub Actions
