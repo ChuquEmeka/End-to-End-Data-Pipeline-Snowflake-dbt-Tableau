@@ -1,5 +1,6 @@
 {{ config(
-    materialized='table'
+    materialized='incremental',
+    unique_key='ShippingID'
 ) }}
 
 WITH shipping_data AS (
@@ -9,9 +10,14 @@ WITH shipping_data AS (
         s.value:Cost::float AS Cost
     FROM {{ source('emeka_market_data', 'SALES_DATA') }},
     LATERAL FLATTEN(input => Shipping) AS s
+    {% if is_incremental() %}
+        -- Only get new or updated shipping data based on ShippingID
+        WHERE s.value:ShippingID::int > (SELECT MAX(ShippingID) FROM {{ this }})
+    {% endif %}
 )
+
 -- Deduplicating by ShippingID
-SELECT DISTINCT(ShippingID) 
+SELECT DISTINCT
     ShippingID, 
     Method, 
     Cost

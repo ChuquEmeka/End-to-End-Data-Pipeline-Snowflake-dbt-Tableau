@@ -9,9 +9,14 @@ WITH product_data AS (
         p.value:UnitPrice::float AS UnitPrice
     FROM EMEKA_MARKET_DATA.RAW_SALES_DATA.SALES_DATA,
     LATERAL FLATTEN(input => Product) AS p
+    
+        -- Only get new or updated products based on ProductID
+        WHERE p.value:ProductID::int > (SELECT MAX(ProductID) FROM EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_product)
+    
 )
+
 -- Deduplicating by ProductID
-SELECT DISTINCT (ProductID) 
+SELECT DISTINCT
     ProductID, 
     ProductName, 
     Category, 

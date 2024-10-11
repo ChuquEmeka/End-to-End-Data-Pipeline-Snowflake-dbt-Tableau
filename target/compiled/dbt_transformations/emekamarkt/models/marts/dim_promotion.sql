@@ -7,9 +7,14 @@ WITH promotion_data AS (
         p.value:DiscountRate::float AS DiscountRate
     FROM EMEKA_MARKET_DATA.RAW_SALES_DATA.SALES_DATA,
     LATERAL FLATTEN(input => Promotion) AS p
+    
+        -- Only get new or updated promotions based on PromotionID
+        WHERE p.value:PromotionID::int > (SELECT MAX(PromotionID) FROM EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_promotion)
+    
 )
+
 -- Deduplicating by PromotionID
-SELECT DISTINCT (PromotionID) 
+SELECT DISTINCT
     PromotionID, 
     PromotionName, 
     DiscountRate

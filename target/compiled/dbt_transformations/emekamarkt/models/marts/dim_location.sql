@@ -9,9 +9,14 @@ WITH location_data AS (
         l.value:Region::string AS Region
     FROM EMEKA_MARKET_DATA.RAW_SALES_DATA.SALES_DATA,
     LATERAL FLATTEN(input => Location) AS l
+    
+        -- Only get new or updated locations based on LocationID
+        WHERE l.value:LocationID::int > (SELECT MAX(LocationID) FROM EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_location)
+    
 )
+
 -- Deduplicating by LocationID
-SELECT DISTINCT (LocationID) 
+SELECT DISTINCT
     LocationID, 
     Country, 
     City, 

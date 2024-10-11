@@ -1,5 +1,6 @@
 {{ config(
-    materialized='table'
+    materialized='incremental',
+    unique_key='PromotionID'
 ) }}
 
 WITH promotion_data AS (
@@ -9,9 +10,14 @@ WITH promotion_data AS (
         p.value:DiscountRate::float AS DiscountRate
     FROM {{ source('emeka_market_data', 'SALES_DATA') }},
     LATERAL FLATTEN(input => Promotion) AS p
+    {% if is_incremental() %}
+        -- Only get new or updated promotions based on PromotionID
+        WHERE p.value:PromotionID::int > (SELECT MAX(PromotionID) FROM {{ this }})
+    {% endif %}
 )
+
 -- Deduplicating by PromotionID
-SELECT DISTINCT (PromotionID) 
+SELECT DISTINCT
     PromotionID, 
     PromotionName, 
     DiscountRate

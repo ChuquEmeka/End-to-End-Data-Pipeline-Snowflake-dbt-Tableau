@@ -1,29 +1,30 @@
-
+-- back compat for old kwarg name
   
+  begin;
+    
+        
+            
+            
+        
     
 
-        create or replace transient table EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_customer
-         as
-        (
+    
 
-WITH customer_data AS (
-    SELECT
-        c.value:CustomerID::int AS CustomerID,
-        c.value:CustomerName::string AS CustomerName,
-        c.value:Email::string AS Email,
-        c.value:PhoneNumber::string AS PhoneNumber,
-        c.value:LoyaltyStatus::string AS LoyaltyStatus
-    FROM EMEKA_MARKET_DATA.RAW_SALES_DATA.SALES_DATA,
-    LATERAL FLATTEN(input => Customer) AS c
-)
+    merge into EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_customer as DBT_INTERNAL_DEST
+        using EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_customer__dbt_tmp as DBT_INTERNAL_SOURCE
+        on (
+                DBT_INTERNAL_SOURCE.CustomerID = DBT_INTERNAL_DEST.CustomerID
+            )
 
-SELECT DISTINCT
-    CustomerID,  
-    CustomerName, 
-    Email, 
-    PhoneNumber, 
-    LoyaltyStatus
-FROM customer_data
-        );
-      
-  
+    
+    when matched then update set
+        "CUSTOMERID" = DBT_INTERNAL_SOURCE."CUSTOMERID","CUSTOMERNAME" = DBT_INTERNAL_SOURCE."CUSTOMERNAME","EMAIL" = DBT_INTERNAL_SOURCE."EMAIL","PHONENUMBER" = DBT_INTERNAL_SOURCE."PHONENUMBER","LOYALTYSTATUS" = DBT_INTERNAL_SOURCE."LOYALTYSTATUS"
+    
+
+    when not matched then insert
+        ("CUSTOMERID", "CUSTOMERNAME", "EMAIL", "PHONENUMBER", "LOYALTYSTATUS")
+    values
+        ("CUSTOMERID", "CUSTOMERNAME", "EMAIL", "PHONENUMBER", "LOYALTYSTATUS")
+
+;
+    commit;

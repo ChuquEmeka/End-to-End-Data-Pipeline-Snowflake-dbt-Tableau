@@ -1,5 +1,6 @@
 {{ config(
-    materialized='table'
+    materialized='incremental',
+    unique_key='LocationID'
 ) }}
 
 WITH location_data AS (
@@ -11,9 +12,14 @@ WITH location_data AS (
         l.value:Region::string AS Region
     FROM {{ source('emeka_market_data', 'SALES_DATA') }},
     LATERAL FLATTEN(input => Location) AS l
+    {% if is_incremental() %}
+        -- Only get new or updated locations based on LocationID
+        WHERE l.value:LocationID::int > (SELECT MAX(LocationID) FROM {{ this }})
+    {% endif %}
 )
+
 -- Deduplicating by LocationID
-SELECT DISTINCT (LocationID) 
+SELECT DISTINCT
     LocationID, 
     Country, 
     City, 

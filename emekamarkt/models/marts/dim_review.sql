@@ -1,5 +1,6 @@
 {{ config(
-    materialized='table'
+    materialized='incremental',
+    unique_key='ReviewID'
 ) }}
 
 WITH review_data AS (
@@ -11,9 +12,14 @@ WITH review_data AS (
         r.value:Comment::string AS Comment
     FROM {{ source('emeka_market_data', 'SALES_DATA') }},
     LATERAL FLATTEN(input => Review) AS r
+    {% if is_incremental() %}
+        -- Only get new or updated reviews based on ReviewID
+        WHERE r.value:ReviewID::int > (SELECT MAX(ReviewID) FROM {{ this }})
+    {% endif %}
 )
+
 -- Deduplicating by ReviewID
-SELECT DISTINCT(ReviewID) 
+SELECT DISTINCT
     ReviewID, 
     ProductID, 
     CustomerID, 

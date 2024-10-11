@@ -1,5 +1,6 @@
 {{ config(
-    materialized='table'
+    materialized='incremental',
+    unique_key='SaleID'
 ) }}
 
 WITH sales_data AS (
@@ -15,6 +16,10 @@ WITH sales_data AS (
         ShippingID,
         ReviewID
     FROM {{ source('emeka_market_data', 'SALES_DATA') }}
+    {% if is_incremental() %}
+        -- Only get new or updated sales based on SaleID
+        WHERE SaleID > (SELECT MAX(SaleID) FROM {{ this }})
+    {% endif %}
 ),
 
 product_data AS (

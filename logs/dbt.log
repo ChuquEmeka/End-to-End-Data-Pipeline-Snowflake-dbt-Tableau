@@ -17981,3 +17981,1775 @@ Parsing Error
 [0m14:02:08.178971 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000214C04463B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000214C23995A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000214C2D86470>]}
 [0m14:02:08.181031 [debug] [MainThread]: Flushing usage events
 [0m14:02:13.634782 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:35:19.257095 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194B42163E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194B6141120>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194B6140F40>]}
+
+
+============================== 15:35:19.263056 | 23d7d11f-30e0-4adc-871c-fac2e23c3265 ==============================
+[0m15:35:19.263056 [info ] [MainThread]: Running with dbt=1.9.0-b1
+[0m15:35:19.264060 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\User\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'C:\\Users\\User\\Desktop\\dbt-Transformations\\logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt run', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:35:19.804886 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '23d7d11f-30e0-4adc-871c-fac2e23c3265', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194B2ABFB50>]}
+[0m15:35:19.861981 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '23d7d11f-30e0-4adc-871c-fac2e23c3265', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194B561B2B0>]}
+[0m15:35:19.863895 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m15:35:19.890645 [debug] [MainThread]: checksum: 342eadeaabeb3b1e51584f606df2b5b2518c39ec1d5d83f52b4bb1c68a4f38ed, vars: {}, profile: , target: , version: 1.9.0b1
+[0m15:35:21.298062 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m15:35:21.299062 [debug] [MainThread]: Partial parsing: updated file: dbt_transformations://emekamarkt/models\marts\dim_customer.sql
+[0m15:35:21.743265 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '23d7d11f-30e0-4adc-871c-fac2e23c3265', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194B8453EB0>]}
+[0m15:35:21.901116 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '23d7d11f-30e0-4adc-871c-fac2e23c3265', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194B8469C00>]}
+[0m15:35:21.902109 [info ] [MainThread]: Found 8 models, 14 data tests, 1 source, 454 macros
+[0m15:35:21.903111 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '23d7d11f-30e0-4adc-871c-fac2e23c3265', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194B846A020>]}
+[0m15:35:21.905193 [info ] [MainThread]: 
+[0m15:35:21.906251 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m15:35:21.907270 [info ] [MainThread]: 
+[0m15:35:21.909282 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m15:35:21.917436 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_EMEKA_MARKET_DATA'
+[0m15:35:21.928120 [debug] [ThreadPool]: Using snowflake connection "list_EMEKA_MARKET_DATA"
+[0m15:35:21.929121 [debug] [ThreadPool]: On list_EMEKA_MARKET_DATA: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "connection_name": "list_EMEKA_MARKET_DATA"} */
+show terse schemas in database EMEKA_MARKET_DATA
+    limit 10000
+[0m15:35:21.930131 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:35:22.873582 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.943 seconds
+[0m15:35:22.875575 [debug] [ThreadPool]: On list_EMEKA_MARKET_DATA: Close
+[0m15:35:23.001071 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_EMEKA_MARKET_DATA_RAW_SALES_DATA'
+[0m15:35:23.010076 [debug] [ThreadPool]: Using snowflake connection "list_EMEKA_MARKET_DATA_RAW_SALES_DATA"
+[0m15:35:23.011093 [debug] [ThreadPool]: On list_EMEKA_MARKET_DATA_RAW_SALES_DATA: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "connection_name": "list_EMEKA_MARKET_DATA_RAW_SALES_DATA"} */
+show objects in EMEKA_MARKET_DATA.RAW_SALES_DATA limit 10000
+[0m15:35:23.012165 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:35:23.760183 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 0.748 seconds
+[0m15:35:23.762273 [debug] [ThreadPool]: On list_EMEKA_MARKET_DATA_RAW_SALES_DATA: Close
+[0m15:35:23.889776 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '23d7d11f-30e0-4adc-871c-fac2e23c3265', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194B291FE50>]}
+[0m15:35:23.901879 [debug] [Thread-1 (]: Began running node model.dbt_transformations.dim_customer
+[0m15:35:23.902876 [info ] [Thread-1 (]: 1 of 8 START sql incremental model RAW_SALES_DATA.dim_customer ................. [RUN]
+[0m15:35:23.904875 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.dbt_transformations.dim_customer'
+[0m15:35:23.905871 [debug] [Thread-1 (]: Began compiling node model.dbt_transformations.dim_customer
+[0m15:35:23.917876 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_transformations.dim_customer"
+[0m15:35:23.919873 [debug] [Thread-1 (]: Began executing node model.dbt_transformations.dim_customer
+[0m15:35:23.963964 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_customer"
+[0m15:35:23.964968 [debug] [Thread-1 (]: On model.dbt_transformations.dim_customer: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_customer"} */
+create or replace  temporary view EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_customer__dbt_tmp
+  
+   as (
+    
+
+WITH customer_data AS (
+    SELECT
+        c.value:CustomerID::int AS CustomerID,
+        c.value:CustomerName::string AS CustomerName,
+        c.value:Email::string AS Email,
+        c.value:PhoneNumber::string AS PhoneNumber,
+        c.value:LoyaltyStatus::string AS LoyaltyStatus
+    FROM EMEKA_MARKET_DATA.RAW_SALES_DATA.SALES_DATA,
+    LATERAL FLATTEN(input => Customer) AS c
+    
+        -- Only get new or updated customers based on CustomerID or another timestamp
+        WHERE c.value:CustomerID::int > (SELECT MAX(CustomerID) FROM EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_customer)
+    
+)
+
+SELECT DISTINCT
+    CustomerID,  
+    CustomerName, 
+    Email, 
+    PhoneNumber, 
+    LoyaltyStatus
+FROM customer_data
+  );
+[0m15:35:23.964968 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m15:35:24.797022 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.832 seconds
+[0m15:35:24.810017 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_customer"
+[0m15:35:24.811020 [debug] [Thread-1 (]: On model.dbt_transformations.dim_customer: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_customer"} */
+describe table EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_customer__dbt_tmp
+[0m15:35:24.977362 [debug] [Thread-1 (]: SQL status: SUCCESS 5 in 0.165 seconds
+[0m15:35:24.984427 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_customer"
+[0m15:35:24.985427 [debug] [Thread-1 (]: On model.dbt_transformations.dim_customer: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_customer"} */
+describe table EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_customer
+[0m15:35:25.066409 [debug] [Thread-1 (]: SQL status: SUCCESS 5 in 0.081 seconds
+[0m15:35:25.076409 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_customer"
+[0m15:35:25.077316 [debug] [Thread-1 (]: On model.dbt_transformations.dim_customer: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_customer"} */
+describe table "EMEKA_MARKET_DATA"."RAW_SALES_DATA"."DIM_CUSTOMER"
+[0m15:35:25.152880 [debug] [Thread-1 (]: SQL status: SUCCESS 5 in 0.075 seconds
+[0m15:35:25.180873 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_transformations.dim_customer"
+[0m15:35:25.184791 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_customer"
+[0m15:35:25.185791 [debug] [Thread-1 (]: On model.dbt_transformations.dim_customer: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_customer"} */
+-- back compat for old kwarg name
+  
+  begin;
+[0m15:35:25.305530 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.120 seconds
+[0m15:35:25.308530 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_customer"
+[0m15:35:25.310524 [debug] [Thread-1 (]: On model.dbt_transformations.dim_customer: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_customer"} */
+merge into EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_customer as DBT_INTERNAL_DEST
+        using EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_customer__dbt_tmp as DBT_INTERNAL_SOURCE
+        on (
+                DBT_INTERNAL_SOURCE.CustomerID = DBT_INTERNAL_DEST.CustomerID
+            )
+
+    
+    when matched then update set
+        "CUSTOMERID" = DBT_INTERNAL_SOURCE."CUSTOMERID","CUSTOMERNAME" = DBT_INTERNAL_SOURCE."CUSTOMERNAME","EMAIL" = DBT_INTERNAL_SOURCE."EMAIL","PHONENUMBER" = DBT_INTERNAL_SOURCE."PHONENUMBER","LOYALTYSTATUS" = DBT_INTERNAL_SOURCE."LOYALTYSTATUS"
+    
+
+    when not matched then insert
+        ("CUSTOMERID", "CUSTOMERNAME", "EMAIL", "PHONENUMBER", "LOYALTYSTATUS")
+    values
+        ("CUSTOMERID", "CUSTOMERNAME", "EMAIL", "PHONENUMBER", "LOYALTYSTATUS")
+
+;
+[0m15:35:26.471539 [debug] [Thread-1 (]: SQL status: SUCCESS 0 in 1.160 seconds
+[0m15:35:26.472544 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_customer"
+[0m15:35:26.473885 [debug] [Thread-1 (]: On model.dbt_transformations.dim_customer: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_customer"} */
+COMMIT
+[0m15:35:26.693469 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.218 seconds
+[0m15:35:26.701471 [debug] [Thread-1 (]: Applying DROP to: EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_customer__dbt_tmp
+[0m15:35:26.709066 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_customer"
+[0m15:35:26.710068 [debug] [Thread-1 (]: On model.dbt_transformations.dim_customer: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_customer"} */
+drop view if exists EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_customer__dbt_tmp cascade
+[0m15:35:26.818710 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.108 seconds
+[0m15:35:26.836660 [debug] [Thread-1 (]: On model.dbt_transformations.dim_customer: Close
+[0m15:35:26.951203 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '23d7d11f-30e0-4adc-871c-fac2e23c3265', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194B8759F60>]}
+[0m15:35:26.952209 [info ] [Thread-1 (]: 1 of 8 OK created sql incremental model RAW_SALES_DATA.dim_customer ............ [[32mSUCCESS 0[0m in 3.04s]
+[0m15:35:26.953193 [debug] [Thread-1 (]: Finished running node model.dbt_transformations.dim_customer
+[0m15:35:26.954283 [debug] [Thread-1 (]: Began running node model.dbt_transformations.dim_location
+[0m15:35:26.955194 [info ] [Thread-1 (]: 2 of 8 START sql table model RAW_SALES_DATA.dim_location ....................... [RUN]
+[0m15:35:26.956189 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_transformations.dim_customer, now model.dbt_transformations.dim_location)
+[0m15:35:26.957289 [debug] [Thread-1 (]: Began compiling node model.dbt_transformations.dim_location
+[0m15:35:26.962978 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_transformations.dim_location"
+[0m15:35:26.965974 [debug] [Thread-1 (]: Began executing node model.dbt_transformations.dim_location
+[0m15:35:26.988973 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_transformations.dim_location"
+[0m15:35:26.991974 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_location"
+[0m15:35:26.993482 [debug] [Thread-1 (]: On model.dbt_transformations.dim_location: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_location"} */
+create or replace transient table EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_location
+         as
+        (
+
+WITH location_data AS (
+    SELECT
+        l.value:LocationID::int AS LocationID,
+        l.value:Country::string AS Country,
+        l.value:City::string AS City,
+        l.value:PostalCode::string AS PostalCode,
+        l.value:Region::string AS Region
+    FROM EMEKA_MARKET_DATA.RAW_SALES_DATA.SALES_DATA,
+    LATERAL FLATTEN(input => Location) AS l
+)
+-- Deduplicating by LocationID
+SELECT DISTINCT (LocationID) 
+    LocationID, 
+    Country, 
+    City, 
+    PostalCode, 
+    Region
+FROM location_data
+        );
+[0m15:35:26.993482 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:35:28.476201 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.482 seconds
+[0m15:35:28.489193 [debug] [Thread-1 (]: On model.dbt_transformations.dim_location: Close
+[0m15:35:28.600177 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '23d7d11f-30e0-4adc-871c-fac2e23c3265', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194B4107B20>]}
+[0m15:35:28.601177 [info ] [Thread-1 (]: 2 of 8 OK created sql table model RAW_SALES_DATA.dim_location .................. [[32mSUCCESS 1[0m in 1.64s]
+[0m15:35:28.603180 [debug] [Thread-1 (]: Finished running node model.dbt_transformations.dim_location
+[0m15:35:28.604301 [debug] [Thread-1 (]: Began running node model.dbt_transformations.dim_product
+[0m15:35:28.605177 [info ] [Thread-1 (]: 3 of 8 START sql table model RAW_SALES_DATA.dim_product ........................ [RUN]
+[0m15:35:28.607176 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_transformations.dim_location, now model.dbt_transformations.dim_product)
+[0m15:35:28.607176 [debug] [Thread-1 (]: Began compiling node model.dbt_transformations.dim_product
+[0m15:35:28.611292 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_transformations.dim_product"
+[0m15:35:28.613175 [debug] [Thread-1 (]: Began executing node model.dbt_transformations.dim_product
+[0m15:35:28.617263 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_transformations.dim_product"
+[0m15:35:28.620178 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_product"
+[0m15:35:28.620178 [debug] [Thread-1 (]: On model.dbt_transformations.dim_product: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_product"} */
+create or replace transient table EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_product
+         as
+        (
+
+WITH product_data AS (
+    SELECT
+        p.value:ProductID::int AS ProductID,
+        p.value:ProductName::string AS ProductName,
+        p.value:Category::string AS Category,
+        p.value:UnitCost::float AS UnitCost,
+        p.value:UnitPrice::float AS UnitPrice
+    FROM EMEKA_MARKET_DATA.RAW_SALES_DATA.SALES_DATA,
+    LATERAL FLATTEN(input => Product) AS p
+)
+-- Deduplicating by ProductID
+SELECT DISTINCT (ProductID) 
+    ProductID, 
+    ProductName, 
+    Category, 
+    UnitCost, 
+    UnitPrice
+FROM product_data
+        );
+[0m15:35:28.621177 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:35:30.032221 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.410 seconds
+[0m15:35:30.038603 [debug] [Thread-1 (]: On model.dbt_transformations.dim_product: Close
+[0m15:35:30.174412 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '23d7d11f-30e0-4adc-871c-fac2e23c3265', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194B88CC700>]}
+[0m15:35:30.176413 [info ] [Thread-1 (]: 3 of 8 OK created sql table model RAW_SALES_DATA.dim_product ................... [[32mSUCCESS 1[0m in 1.57s]
+[0m15:35:30.177412 [debug] [Thread-1 (]: Finished running node model.dbt_transformations.dim_product
+[0m15:35:30.178417 [debug] [Thread-1 (]: Began running node model.dbt_transformations.dim_promotion
+[0m15:35:30.179419 [info ] [Thread-1 (]: 4 of 8 START sql table model RAW_SALES_DATA.dim_promotion ...................... [RUN]
+[0m15:35:30.181412 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_transformations.dim_product, now model.dbt_transformations.dim_promotion)
+[0m15:35:30.181412 [debug] [Thread-1 (]: Began compiling node model.dbt_transformations.dim_promotion
+[0m15:35:30.187418 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_transformations.dim_promotion"
+[0m15:35:30.188418 [debug] [Thread-1 (]: Began executing node model.dbt_transformations.dim_promotion
+[0m15:35:30.194413 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_transformations.dim_promotion"
+[0m15:35:30.198419 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_promotion"
+[0m15:35:30.200413 [debug] [Thread-1 (]: On model.dbt_transformations.dim_promotion: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_promotion"} */
+create or replace transient table EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_promotion
+         as
+        (
+
+WITH promotion_data AS (
+    SELECT
+        p.value:PromotionID::int AS PromotionID,
+        p.value:PromotionName::string AS PromotionName,
+        p.value:DiscountRate::float AS DiscountRate
+    FROM EMEKA_MARKET_DATA.RAW_SALES_DATA.SALES_DATA,
+    LATERAL FLATTEN(input => Promotion) AS p
+)
+-- Deduplicating by PromotionID
+SELECT DISTINCT (PromotionID) 
+    PromotionID, 
+    PromotionName, 
+    DiscountRate
+FROM promotion_data
+        );
+[0m15:35:30.201412 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:35:31.173513 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.972 seconds
+[0m15:35:31.176566 [debug] [Thread-1 (]: On model.dbt_transformations.dim_promotion: Close
+[0m15:35:31.290523 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '23d7d11f-30e0-4adc-871c-fac2e23c3265', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194B8984DC0>]}
+[0m15:35:31.291572 [info ] [Thread-1 (]: 4 of 8 OK created sql table model RAW_SALES_DATA.dim_promotion ................. [[32mSUCCESS 1[0m in 1.11s]
+[0m15:35:31.293474 [debug] [Thread-1 (]: Finished running node model.dbt_transformations.dim_promotion
+[0m15:35:31.294470 [debug] [Thread-1 (]: Began running node model.dbt_transformations.dim_review
+[0m15:35:31.295469 [info ] [Thread-1 (]: 5 of 8 START sql table model RAW_SALES_DATA.dim_review ......................... [RUN]
+[0m15:35:31.297474 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_transformations.dim_promotion, now model.dbt_transformations.dim_review)
+[0m15:35:31.297474 [debug] [Thread-1 (]: Began compiling node model.dbt_transformations.dim_review
+[0m15:35:31.301573 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_transformations.dim_review"
+[0m15:35:31.302485 [debug] [Thread-1 (]: Began executing node model.dbt_transformations.dim_review
+[0m15:35:31.305573 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_transformations.dim_review"
+[0m15:35:31.308499 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_review"
+[0m15:35:31.308499 [debug] [Thread-1 (]: On model.dbt_transformations.dim_review: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_review"} */
+create or replace transient table EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_review
+         as
+        (
+
+WITH review_data AS (
+    SELECT
+        r.value:ReviewID::int AS ReviewID,
+        r.value:ProductID::int AS ProductID,
+        r.value:CustomerID::int AS CustomerID,
+        r.value:Rating::int AS Rating,
+        r.value:Comment::string AS Comment
+    FROM EMEKA_MARKET_DATA.RAW_SALES_DATA.SALES_DATA,
+    LATERAL FLATTEN(input => Review) AS r
+)
+-- Deduplicating by ReviewID
+SELECT DISTINCT(ReviewID) 
+    ReviewID, 
+    ProductID, 
+    CustomerID, 
+    Rating, 
+    Comment
+FROM review_data
+        );
+[0m15:35:31.309470 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:35:32.357178 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.048 seconds
+[0m15:35:32.362174 [debug] [Thread-1 (]: On model.dbt_transformations.dim_review: Close
+[0m15:35:32.485455 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '23d7d11f-30e0-4adc-871c-fac2e23c3265', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194B8984DC0>]}
+[0m15:35:32.487447 [info ] [Thread-1 (]: 5 of 8 OK created sql table model RAW_SALES_DATA.dim_review .................... [[32mSUCCESS 1[0m in 1.19s]
+[0m15:35:32.489116 [debug] [Thread-1 (]: Finished running node model.dbt_transformations.dim_review
+[0m15:35:32.490116 [debug] [Thread-1 (]: Began running node model.dbt_transformations.dim_shipping
+[0m15:35:32.491116 [info ] [Thread-1 (]: 6 of 8 START sql table model RAW_SALES_DATA.dim_shipping ....................... [RUN]
+[0m15:35:32.491553 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_transformations.dim_review, now model.dbt_transformations.dim_shipping)
+[0m15:35:32.492653 [debug] [Thread-1 (]: Began compiling node model.dbt_transformations.dim_shipping
+[0m15:35:32.496632 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_transformations.dim_shipping"
+[0m15:35:32.498568 [debug] [Thread-1 (]: Began executing node model.dbt_transformations.dim_shipping
+[0m15:35:32.501656 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_transformations.dim_shipping"
+[0m15:35:32.507574 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_shipping"
+[0m15:35:32.508561 [debug] [Thread-1 (]: On model.dbt_transformations.dim_shipping: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_shipping"} */
+create or replace transient table EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_shipping
+         as
+        (
+
+WITH shipping_data AS (
+    SELECT
+        s.value:ShippingID::int AS ShippingID,
+        s.value:Method::string AS Method,
+        s.value:Cost::float AS Cost
+    FROM EMEKA_MARKET_DATA.RAW_SALES_DATA.SALES_DATA,
+    LATERAL FLATTEN(input => Shipping) AS s
+)
+-- Deduplicating by ShippingID
+SELECT DISTINCT(ShippingID) 
+    ShippingID, 
+    Method, 
+    Cost
+FROM shipping_data
+        );
+[0m15:35:32.508561 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:35:33.768782 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.259 seconds
+[0m15:35:33.770778 [debug] [Thread-1 (]: On model.dbt_transformations.dim_shipping: Close
+[0m15:35:33.879450 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '23d7d11f-30e0-4adc-871c-fac2e23c3265', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194B8924970>]}
+[0m15:35:33.881468 [info ] [Thread-1 (]: 6 of 8 OK created sql table model RAW_SALES_DATA.dim_shipping .................. [[32mSUCCESS 1[0m in 1.39s]
+[0m15:35:33.883450 [debug] [Thread-1 (]: Finished running node model.dbt_transformations.dim_shipping
+[0m15:35:33.883450 [debug] [Thread-1 (]: Began running node model.dbt_transformations.fact_sales
+[0m15:35:33.884450 [info ] [Thread-1 (]: 7 of 8 START sql table model RAW_SALES_DATA.fact_sales ......................... [RUN]
+[0m15:35:33.886567 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_transformations.dim_shipping, now model.dbt_transformations.fact_sales)
+[0m15:35:33.886567 [debug] [Thread-1 (]: Began compiling node model.dbt_transformations.fact_sales
+[0m15:35:33.957455 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_transformations.fact_sales"
+[0m15:35:33.959453 [debug] [Thread-1 (]: Began executing node model.dbt_transformations.fact_sales
+[0m15:35:33.964895 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_transformations.fact_sales"
+[0m15:35:33.967815 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.fact_sales"
+[0m15:35:33.968899 [debug] [Thread-1 (]: On model.dbt_transformations.fact_sales: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.fact_sales"} */
+create or replace transient table EMEKA_MARKET_DATA.RAW_SALES_DATA.fact_sales
+         as
+        (
+
+WITH sales_data AS (
+    -- Get the necessary fields from the raw sales data
+    SELECT
+        SaleID,
+        Quantity,
+        SaleDate,
+        LocationID,
+        CustomerID,
+        ProductID,
+        PromotionID,
+        ShippingID,
+        ReviewID
+    FROM EMEKA_MARKET_DATA.RAW_SALES_DATA.SALES_DATA
+),
+
+product_data AS (
+    -- Get the necessary fields from the product dimension table
+    SELECT
+        p.ProductID,
+        p.UnitCost,
+        p.UnitPrice
+    FROM EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_product AS p
+)
+
+-- Join the sales data with the product data to calculate total cost, revenue, and profit
+SELECT 
+    s.SaleID,
+    s.Quantity,
+    s.SaleDate,
+    s.LocationID,
+    s.CustomerID,
+    s.ProductID,
+    s.PromotionID,
+    s.ShippingID,
+    s.ReviewID,
+    (s.Quantity * p.UnitPrice) AS total_revenue,
+    (s.Quantity * p.UnitCost) AS total_cost,
+    ((s.Quantity * p.UnitPrice) - (s.Quantity * p.UnitCost)) AS total_profit
+FROM sales_data s
+JOIN product_data p
+    ON s.ProductID = p.ProductID
+        );
+[0m15:35:33.968899 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:35:35.089900 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.120 seconds
+[0m15:35:35.094897 [debug] [Thread-1 (]: On model.dbt_transformations.fact_sales: Close
+[0m15:35:35.211550 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '23d7d11f-30e0-4adc-871c-fac2e23c3265', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194B8924970>]}
+[0m15:35:35.213464 [info ] [Thread-1 (]: 7 of 8 OK created sql table model RAW_SALES_DATA.fact_sales .................... [[32mSUCCESS 1[0m in 1.32s]
+[0m15:35:35.215508 [debug] [Thread-1 (]: Finished running node model.dbt_transformations.fact_sales
+[0m15:35:35.217461 [debug] [Thread-1 (]: Began running node model.dbt_transformations.dim_profit_cost
+[0m15:35:35.217461 [info ] [Thread-1 (]: 8 of 8 START sql table model RAW_SALES_DATA.dim_profit_cost .................... [RUN]
+[0m15:35:35.218968 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_transformations.fact_sales, now model.dbt_transformations.dim_profit_cost)
+[0m15:35:35.219977 [debug] [Thread-1 (]: Began compiling node model.dbt_transformations.dim_profit_cost
+[0m15:35:35.223977 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_transformations.dim_profit_cost"
+[0m15:35:35.229276 [debug] [Thread-1 (]: Began executing node model.dbt_transformations.dim_profit_cost
+[0m15:35:35.232265 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_transformations.dim_profit_cost"
+[0m15:35:35.234773 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_profit_cost"
+[0m15:35:35.235770 [debug] [Thread-1 (]: On model.dbt_transformations.dim_profit_cost: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_profit_cost"} */
+create or replace transient table EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_profit_cost
+         as
+        (
+
+WITH sales_data AS (
+    -- Get the necessary fields from the sales fact table
+    SELECT
+        ProductID,
+        SUM(Quantity) AS total_quantity
+    FROM EMEKA_MARKET_DATA.RAW_SALES_DATA.fact_sales
+    GROUP BY ProductID
+),
+
+product_data AS (
+    -- Get the necessary fields from the product dimension table
+    SELECT
+        ProductID,
+        UnitCost,
+        UnitPrice
+    FROM EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_product
+)
+
+-- Join the sales data with the product data to calculate total cost, revenue, and profit
+SELECT 
+    p.ProductID,
+    s.total_quantity,
+    (s.total_quantity * p.UnitPrice) AS total_revenue,
+    (s.total_quantity * p.UnitCost) AS total_cost,
+    ((s.total_quantity * p.UnitPrice) - (s.total_quantity * p.UnitCost)) AS total_profit
+FROM sales_data s
+JOIN product_data p
+    ON s.ProductID = p.ProductID
+        );
+[0m15:35:35.235770 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:35:36.594570 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.358 seconds
+[0m15:35:36.598563 [debug] [Thread-1 (]: On model.dbt_transformations.dim_profit_cost: Close
+[0m15:35:36.719047 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '23d7d11f-30e0-4adc-871c-fac2e23c3265', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194B88805B0>]}
+[0m15:35:36.719961 [info ] [Thread-1 (]: 8 of 8 OK created sql table model RAW_SALES_DATA.dim_profit_cost ............... [[32mSUCCESS 1[0m in 1.50s]
+[0m15:35:36.721957 [debug] [Thread-1 (]: Finished running node model.dbt_transformations.dim_profit_cost
+[0m15:35:36.723957 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:35:36.724957 [debug] [MainThread]: Connection 'list_EMEKA_MARKET_DATA' was properly closed.
+[0m15:35:36.725986 [debug] [MainThread]: Connection 'list_EMEKA_MARKET_DATA_RAW_SALES_DATA' was properly closed.
+[0m15:35:36.726990 [debug] [MainThread]: Connection 'model.dbt_transformations.dim_profit_cost' was properly closed.
+[0m15:35:36.729136 [info ] [MainThread]: 
+[0m15:35:36.730145 [info ] [MainThread]: Finished running 1 incremental model, 7 table models in 0 hours 0 minutes and 14.82 seconds (14.82s).
+[0m15:35:36.732521 [debug] [MainThread]: Command end result
+[0m15:35:36.776209 [info ] [MainThread]: 
+[0m15:35:36.777208 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m15:35:36.777879 [info ] [MainThread]: 
+[0m15:35:36.778889 [info ] [MainThread]: Done. PASS=8 WARN=0 ERROR=0 SKIP=0 TOTAL=8
+[0m15:35:36.780903 [debug] [MainThread]: Command `dbt run` succeeded at 15:35:36.780903 after 17.60 seconds
+[0m15:35:36.781975 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194B42163E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194B8908EB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194B8909690>]}
+[0m15:35:36.782896 [debug] [MainThread]: Flushing usage events
+[0m15:35:37.399751 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:40:11.967025 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A3E53263E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A3E7251120>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A3E7250F40>]}
+
+
+============================== 15:40:11.971099 | 9c66dcf0-8fb8-4de8-b406-b0d82ee6d4c3 ==============================
+[0m15:40:11.971099 [info ] [MainThread]: Running with dbt=1.9.0-b1
+[0m15:40:11.973188 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\User\\.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'C:\\Users\\User\\Desktop\\dbt-Transformations\\logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m15:40:12.499581 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9c66dcf0-8fb8-4de8-b406-b0d82ee6d4c3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A3E3BCFB50>]}
+[0m15:40:12.556567 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9c66dcf0-8fb8-4de8-b406-b0d82ee6d4c3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A3E672B2B0>]}
+[0m15:40:12.557565 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m15:40:12.568004 [debug] [MainThread]: checksum: 342eadeaabeb3b1e51584f606df2b5b2518c39ec1d5d83f52b4bb1c68a4f38ed, vars: {}, profile: , target: , version: 1.9.0b1
+[0m15:40:12.806294 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 6 files changed.
+[0m15:40:12.807229 [debug] [MainThread]: Partial parsing: updated file: dbt_transformations://emekamarkt/models\marts\fact_sales.sql
+[0m15:40:12.807229 [debug] [MainThread]: Partial parsing: updated file: dbt_transformations://emekamarkt/models\marts\dim_promotion.sql
+[0m15:40:12.808302 [debug] [MainThread]: Partial parsing: updated file: dbt_transformations://emekamarkt/models\marts\dim_location.sql
+[0m15:40:12.809258 [debug] [MainThread]: Partial parsing: updated file: dbt_transformations://emekamarkt/models\marts\dim_product.sql
+[0m15:40:12.810213 [debug] [MainThread]: Partial parsing: updated file: dbt_transformations://emekamarkt/models\marts\dim_shipping.sql
+[0m15:40:12.811209 [debug] [MainThread]: Partial parsing: updated file: dbt_transformations://emekamarkt/models\marts\dim_review.sql
+[0m15:40:13.301214 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9c66dcf0-8fb8-4de8-b406-b0d82ee6d4c3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A3E956E230>]}
+[0m15:40:13.425854 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9c66dcf0-8fb8-4de8-b406-b0d82ee6d4c3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A3E926F700>]}
+[0m15:40:13.426853 [info ] [MainThread]: Found 8 models, 14 data tests, 1 source, 454 macros
+[0m15:40:13.427869 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9c66dcf0-8fb8-4de8-b406-b0d82ee6d4c3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A3E926C7C0>]}
+[0m15:40:13.430896 [info ] [MainThread]: 
+[0m15:40:13.431851 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m15:40:13.432856 [info ] [MainThread]: 
+[0m15:40:13.433851 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m15:40:13.440847 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_EMEKA_MARKET_DATA'
+[0m15:40:13.453845 [debug] [ThreadPool]: Using snowflake connection "list_EMEKA_MARKET_DATA"
+[0m15:40:13.454852 [debug] [ThreadPool]: On list_EMEKA_MARKET_DATA: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "connection_name": "list_EMEKA_MARKET_DATA"} */
+show terse schemas in database EMEKA_MARKET_DATA
+    limit 10000
+[0m15:40:13.454852 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:40:14.323948 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.869 seconds
+[0m15:40:14.325947 [debug] [ThreadPool]: On list_EMEKA_MARKET_DATA: Close
+[0m15:40:14.450941 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_EMEKA_MARKET_DATA_RAW_SALES_DATA'
+[0m15:40:14.460860 [debug] [ThreadPool]: Using snowflake connection "list_EMEKA_MARKET_DATA_RAW_SALES_DATA"
+[0m15:40:14.461944 [debug] [ThreadPool]: On list_EMEKA_MARKET_DATA_RAW_SALES_DATA: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "connection_name": "list_EMEKA_MARKET_DATA_RAW_SALES_DATA"} */
+show objects in EMEKA_MARKET_DATA.RAW_SALES_DATA limit 10000
+[0m15:40:14.461944 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:40:15.274137 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 0.812 seconds
+[0m15:40:15.277138 [debug] [ThreadPool]: On list_EMEKA_MARKET_DATA_RAW_SALES_DATA: Close
+[0m15:40:15.405730 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9c66dcf0-8fb8-4de8-b406-b0d82ee6d4c3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A3E3A2FE50>]}
+[0m15:40:15.411731 [debug] [Thread-1 (]: Began running node model.dbt_transformations.dim_customer
+[0m15:40:15.412727 [info ] [Thread-1 (]: 1 of 8 START sql incremental model RAW_SALES_DATA.dim_customer ................. [RUN]
+[0m15:40:15.414727 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.dbt_transformations.dim_customer'
+[0m15:40:15.415733 [debug] [Thread-1 (]: Began compiling node model.dbt_transformations.dim_customer
+[0m15:40:15.424725 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_transformations.dim_customer"
+[0m15:40:15.426727 [debug] [Thread-1 (]: Began executing node model.dbt_transformations.dim_customer
+[0m15:40:15.469821 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_customer"
+[0m15:40:15.470865 [debug] [Thread-1 (]: On model.dbt_transformations.dim_customer: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_customer"} */
+create or replace  temporary view EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_customer__dbt_tmp
+  
+   as (
+    
+
+WITH customer_data AS (
+    SELECT
+        c.value:CustomerID::int AS CustomerID,
+        c.value:CustomerName::string AS CustomerName,
+        c.value:Email::string AS Email,
+        c.value:PhoneNumber::string AS PhoneNumber,
+        c.value:LoyaltyStatus::string AS LoyaltyStatus
+    FROM EMEKA_MARKET_DATA.RAW_SALES_DATA.SALES_DATA,
+    LATERAL FLATTEN(input => Customer) AS c
+    
+        -- Only get new or updated customers based on CustomerID or another timestamp
+        WHERE c.value:CustomerID::int > (SELECT MAX(CustomerID) FROM EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_customer)
+    
+)
+
+SELECT DISTINCT
+    CustomerID,  
+    CustomerName, 
+    Email, 
+    PhoneNumber, 
+    LoyaltyStatus
+FROM customer_data
+  );
+[0m15:40:15.471740 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m15:40:16.218237 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.746 seconds
+[0m15:40:16.233330 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_customer"
+[0m15:40:16.234335 [debug] [Thread-1 (]: On model.dbt_transformations.dim_customer: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_customer"} */
+describe table EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_customer__dbt_tmp
+[0m15:40:16.361598 [debug] [Thread-1 (]: SQL status: SUCCESS 5 in 0.126 seconds
+[0m15:40:16.369584 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_customer"
+[0m15:40:16.370585 [debug] [Thread-1 (]: On model.dbt_transformations.dim_customer: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_customer"} */
+describe table EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_customer
+[0m15:40:16.472633 [debug] [Thread-1 (]: SQL status: SUCCESS 5 in 0.101 seconds
+[0m15:40:16.481625 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_customer"
+[0m15:40:16.482624 [debug] [Thread-1 (]: On model.dbt_transformations.dim_customer: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_customer"} */
+describe table "EMEKA_MARKET_DATA"."RAW_SALES_DATA"."DIM_CUSTOMER"
+[0m15:40:16.567833 [debug] [Thread-1 (]: SQL status: SUCCESS 5 in 0.084 seconds
+[0m15:40:16.596829 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_transformations.dim_customer"
+[0m15:40:16.598752 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_customer"
+[0m15:40:16.599792 [debug] [Thread-1 (]: On model.dbt_transformations.dim_customer: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_customer"} */
+-- back compat for old kwarg name
+  
+  begin;
+[0m15:40:16.710732 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.110 seconds
+[0m15:40:16.713639 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_customer"
+[0m15:40:16.714723 [debug] [Thread-1 (]: On model.dbt_transformations.dim_customer: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_customer"} */
+merge into EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_customer as DBT_INTERNAL_DEST
+        using EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_customer__dbt_tmp as DBT_INTERNAL_SOURCE
+        on (
+                DBT_INTERNAL_SOURCE.CustomerID = DBT_INTERNAL_DEST.CustomerID
+            )
+
+    
+    when matched then update set
+        "CUSTOMERID" = DBT_INTERNAL_SOURCE."CUSTOMERID","CUSTOMERNAME" = DBT_INTERNAL_SOURCE."CUSTOMERNAME","EMAIL" = DBT_INTERNAL_SOURCE."EMAIL","PHONENUMBER" = DBT_INTERNAL_SOURCE."PHONENUMBER","LOYALTYSTATUS" = DBT_INTERNAL_SOURCE."LOYALTYSTATUS"
+    
+
+    when not matched then insert
+        ("CUSTOMERID", "CUSTOMERNAME", "EMAIL", "PHONENUMBER", "LOYALTYSTATUS")
+    values
+        ("CUSTOMERID", "CUSTOMERNAME", "EMAIL", "PHONENUMBER", "LOYALTYSTATUS")
+
+;
+[0m15:40:17.469176 [debug] [Thread-1 (]: SQL status: SUCCESS 0 in 0.753 seconds
+[0m15:40:17.471177 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_customer"
+[0m15:40:17.472174 [debug] [Thread-1 (]: On model.dbt_transformations.dim_customer: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_customer"} */
+COMMIT
+[0m15:40:17.629262 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.156 seconds
+[0m15:40:17.640260 [debug] [Thread-1 (]: Applying DROP to: EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_customer__dbt_tmp
+[0m15:40:17.646255 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_customer"
+[0m15:40:17.647232 [debug] [Thread-1 (]: On model.dbt_transformations.dim_customer: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_customer"} */
+drop view if exists EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_customer__dbt_tmp cascade
+[0m15:40:17.845361 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.198 seconds
+[0m15:40:17.867442 [debug] [Thread-1 (]: On model.dbt_transformations.dim_customer: Close
+[0m15:40:17.994715 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9c66dcf0-8fb8-4de8-b406-b0d82ee6d4c3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A3E98BA5C0>]}
+[0m15:40:17.996619 [info ] [Thread-1 (]: 1 of 8 OK created sql incremental model RAW_SALES_DATA.dim_customer ............ [[32mSUCCESS 0[0m in 2.58s]
+[0m15:40:17.998616 [debug] [Thread-1 (]: Finished running node model.dbt_transformations.dim_customer
+[0m15:40:17.999616 [debug] [Thread-1 (]: Began running node model.dbt_transformations.dim_location
+[0m15:40:18.000634 [info ] [Thread-1 (]: 2 of 8 START sql incremental model RAW_SALES_DATA.dim_location ................. [RUN]
+[0m15:40:18.002629 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_transformations.dim_customer, now model.dbt_transformations.dim_location)
+[0m15:40:18.002629 [debug] [Thread-1 (]: Began compiling node model.dbt_transformations.dim_location
+[0m15:40:18.007708 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_transformations.dim_location"
+[0m15:40:18.008711 [debug] [Thread-1 (]: Began executing node model.dbt_transformations.dim_location
+[0m15:40:18.013718 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_location"
+[0m15:40:18.014713 [debug] [Thread-1 (]: On model.dbt_transformations.dim_location: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_location"} */
+create or replace  temporary view EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_location__dbt_tmp
+  
+   as (
+    
+
+WITH location_data AS (
+    SELECT
+        l.value:LocationID::int AS LocationID,
+        l.value:Country::string AS Country,
+        l.value:City::string AS City,
+        l.value:PostalCode::string AS PostalCode,
+        l.value:Region::string AS Region
+    FROM EMEKA_MARKET_DATA.RAW_SALES_DATA.SALES_DATA,
+    LATERAL FLATTEN(input => Location) AS l
+    
+        -- Only get new or updated locations based on LocationID
+        WHERE l.value:LocationID::int > (SELECT MAX(LocationID) FROM EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_location)
+    
+)
+
+-- Deduplicating by LocationID
+SELECT DISTINCT
+    LocationID, 
+    Country, 
+    City, 
+    PostalCode, 
+    Region
+FROM location_data
+  );
+[0m15:40:18.015616 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:40:18.820131 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.804 seconds
+[0m15:40:18.825034 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_location"
+[0m15:40:18.826126 [debug] [Thread-1 (]: On model.dbt_transformations.dim_location: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_location"} */
+describe table EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_location__dbt_tmp
+[0m15:40:18.907665 [debug] [Thread-1 (]: SQL status: SUCCESS 5 in 0.081 seconds
+[0m15:40:18.914658 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_location"
+[0m15:40:18.915658 [debug] [Thread-1 (]: On model.dbt_transformations.dim_location: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_location"} */
+describe table EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_location
+[0m15:40:18.990120 [debug] [Thread-1 (]: SQL status: SUCCESS 5 in 0.073 seconds
+[0m15:40:18.999113 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_location"
+[0m15:40:18.999113 [debug] [Thread-1 (]: On model.dbt_transformations.dim_location: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_location"} */
+describe table "EMEKA_MARKET_DATA"."RAW_SALES_DATA"."DIM_LOCATION"
+[0m15:40:19.097183 [debug] [Thread-1 (]: SQL status: SUCCESS 5 in 0.097 seconds
+[0m15:40:19.104184 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_transformations.dim_location"
+[0m15:40:19.107106 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_location"
+[0m15:40:19.107106 [debug] [Thread-1 (]: On model.dbt_transformations.dim_location: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_location"} */
+-- back compat for old kwarg name
+  
+  begin;
+[0m15:40:19.200811 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.093 seconds
+[0m15:40:19.202812 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_location"
+[0m15:40:19.204814 [debug] [Thread-1 (]: On model.dbt_transformations.dim_location: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_location"} */
+merge into EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_location as DBT_INTERNAL_DEST
+        using EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_location__dbt_tmp as DBT_INTERNAL_SOURCE
+        on (
+                DBT_INTERNAL_SOURCE.LocationID = DBT_INTERNAL_DEST.LocationID
+            )
+
+    
+    when matched then update set
+        "LOCATIONID" = DBT_INTERNAL_SOURCE."LOCATIONID","COUNTRY" = DBT_INTERNAL_SOURCE."COUNTRY","CITY" = DBT_INTERNAL_SOURCE."CITY","POSTALCODE" = DBT_INTERNAL_SOURCE."POSTALCODE","REGION" = DBT_INTERNAL_SOURCE."REGION"
+    
+
+    when not matched then insert
+        ("LOCATIONID", "COUNTRY", "CITY", "POSTALCODE", "REGION")
+    values
+        ("LOCATIONID", "COUNTRY", "CITY", "POSTALCODE", "REGION")
+
+;
+[0m15:40:19.695130 [debug] [Thread-1 (]: SQL status: SUCCESS 0 in 0.489 seconds
+[0m15:40:19.697140 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_location"
+[0m15:40:19.698051 [debug] [Thread-1 (]: On model.dbt_transformations.dim_location: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_location"} */
+COMMIT
+[0m15:40:19.860418 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.161 seconds
+[0m15:40:19.868410 [debug] [Thread-1 (]: Applying DROP to: EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_location__dbt_tmp
+[0m15:40:19.870428 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_location"
+[0m15:40:19.870428 [debug] [Thread-1 (]: On model.dbt_transformations.dim_location: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_location"} */
+drop view if exists EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_location__dbt_tmp cascade
+[0m15:40:20.062480 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.191 seconds
+[0m15:40:20.065490 [debug] [Thread-1 (]: On model.dbt_transformations.dim_location: Close
+[0m15:40:20.189847 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9c66dcf0-8fb8-4de8-b406-b0d82ee6d4c3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A3E5217B20>]}
+[0m15:40:20.191853 [info ] [Thread-1 (]: 2 of 8 OK created sql incremental model RAW_SALES_DATA.dim_location ............ [[32mSUCCESS 0[0m in 2.19s]
+[0m15:40:20.194787 [debug] [Thread-1 (]: Finished running node model.dbt_transformations.dim_location
+[0m15:40:20.195844 [debug] [Thread-1 (]: Began running node model.dbt_transformations.dim_product
+[0m15:40:20.196778 [info ] [Thread-1 (]: 3 of 8 START sql incremental model RAW_SALES_DATA.dim_product .................. [RUN]
+[0m15:40:20.198761 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_transformations.dim_location, now model.dbt_transformations.dim_product)
+[0m15:40:20.199764 [debug] [Thread-1 (]: Began compiling node model.dbt_transformations.dim_product
+[0m15:40:20.205788 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_transformations.dim_product"
+[0m15:40:20.207763 [debug] [Thread-1 (]: Began executing node model.dbt_transformations.dim_product
+[0m15:40:20.266023 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_product"
+[0m15:40:20.267014 [debug] [Thread-1 (]: On model.dbt_transformations.dim_product: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_product"} */
+create or replace  temporary view EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_product__dbt_tmp
+  
+   as (
+    
+
+WITH product_data AS (
+    SELECT
+        p.value:ProductID::int AS ProductID,
+        p.value:ProductName::string AS ProductName,
+        p.value:Category::string AS Category,
+        p.value:UnitCost::float AS UnitCost,
+        p.value:UnitPrice::float AS UnitPrice
+    FROM EMEKA_MARKET_DATA.RAW_SALES_DATA.SALES_DATA,
+    LATERAL FLATTEN(input => Product) AS p
+    
+        -- Only get new or updated products based on ProductID
+        WHERE p.value:ProductID::int > (SELECT MAX(ProductID) FROM EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_product)
+    
+)
+
+-- Deduplicating by ProductID
+SELECT DISTINCT
+    ProductID, 
+    ProductName, 
+    Category, 
+    UnitCost, 
+    UnitPrice
+FROM product_data
+  );
+[0m15:40:20.267958 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:40:21.127815 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.860 seconds
+[0m15:40:21.135809 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_product"
+[0m15:40:21.136809 [debug] [Thread-1 (]: On model.dbt_transformations.dim_product: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_product"} */
+describe table EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_product__dbt_tmp
+[0m15:40:21.257808 [debug] [Thread-1 (]: SQL status: SUCCESS 5 in 0.120 seconds
+[0m15:40:21.260805 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_product"
+[0m15:40:21.261806 [debug] [Thread-1 (]: On model.dbt_transformations.dim_product: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_product"} */
+describe table EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_product
+[0m15:40:21.341924 [debug] [Thread-1 (]: SQL status: SUCCESS 5 in 0.079 seconds
+[0m15:40:21.347916 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_product"
+[0m15:40:21.347916 [debug] [Thread-1 (]: On model.dbt_transformations.dim_product: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_product"} */
+describe table "EMEKA_MARKET_DATA"."RAW_SALES_DATA"."DIM_PRODUCT"
+[0m15:40:21.421588 [debug] [Thread-1 (]: SQL status: SUCCESS 5 in 0.072 seconds
+[0m15:40:21.427580 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_transformations.dim_product"
+[0m15:40:21.430583 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_product"
+[0m15:40:21.431581 [debug] [Thread-1 (]: On model.dbt_transformations.dim_product: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_product"} */
+-- back compat for old kwarg name
+  
+  begin;
+[0m15:40:21.539049 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.107 seconds
+[0m15:40:21.541047 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_product"
+[0m15:40:21.543045 [debug] [Thread-1 (]: On model.dbt_transformations.dim_product: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_product"} */
+merge into EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_product as DBT_INTERNAL_DEST
+        using EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_product__dbt_tmp as DBT_INTERNAL_SOURCE
+        on (
+                DBT_INTERNAL_SOURCE.ProductID = DBT_INTERNAL_DEST.ProductID
+            )
+
+    
+    when matched then update set
+        "PRODUCTID" = DBT_INTERNAL_SOURCE."PRODUCTID","PRODUCTNAME" = DBT_INTERNAL_SOURCE."PRODUCTNAME","CATEGORY" = DBT_INTERNAL_SOURCE."CATEGORY","UNITCOST" = DBT_INTERNAL_SOURCE."UNITCOST","UNITPRICE" = DBT_INTERNAL_SOURCE."UNITPRICE"
+    
+
+    when not matched then insert
+        ("PRODUCTID", "PRODUCTNAME", "CATEGORY", "UNITCOST", "UNITPRICE")
+    values
+        ("PRODUCTID", "PRODUCTNAME", "CATEGORY", "UNITCOST", "UNITPRICE")
+
+;
+[0m15:40:22.103465 [debug] [Thread-1 (]: SQL status: SUCCESS 0 in 0.559 seconds
+[0m15:40:22.106378 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_product"
+[0m15:40:22.107470 [debug] [Thread-1 (]: On model.dbt_transformations.dim_product: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_product"} */
+COMMIT
+[0m15:40:22.278482 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.170 seconds
+[0m15:40:22.282475 [debug] [Thread-1 (]: Applying DROP to: EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_product__dbt_tmp
+[0m15:40:22.284469 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_product"
+[0m15:40:22.284469 [debug] [Thread-1 (]: On model.dbt_transformations.dim_product: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_product"} */
+drop view if exists EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_product__dbt_tmp cascade
+[0m15:40:22.388636 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.103 seconds
+[0m15:40:22.394637 [debug] [Thread-1 (]: On model.dbt_transformations.dim_product: Close
+[0m15:40:22.509153 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9c66dcf0-8fb8-4de8-b406-b0d82ee6d4c3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A3E93CADA0>]}
+[0m15:40:22.511137 [info ] [Thread-1 (]: 3 of 8 OK created sql incremental model RAW_SALES_DATA.dim_product ............. [[32mSUCCESS 0[0m in 2.31s]
+[0m15:40:22.514049 [debug] [Thread-1 (]: Finished running node model.dbt_transformations.dim_product
+[0m15:40:22.515131 [debug] [Thread-1 (]: Began running node model.dbt_transformations.dim_promotion
+[0m15:40:22.516062 [info ] [Thread-1 (]: 4 of 8 START sql incremental model RAW_SALES_DATA.dim_promotion ................ [RUN]
+[0m15:40:22.518354 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_transformations.dim_product, now model.dbt_transformations.dim_promotion)
+[0m15:40:22.518354 [debug] [Thread-1 (]: Began compiling node model.dbt_transformations.dim_promotion
+[0m15:40:22.523429 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_transformations.dim_promotion"
+[0m15:40:22.525345 [debug] [Thread-1 (]: Began executing node model.dbt_transformations.dim_promotion
+[0m15:40:22.529430 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_promotion"
+[0m15:40:22.530444 [debug] [Thread-1 (]: On model.dbt_transformations.dim_promotion: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_promotion"} */
+create or replace  temporary view EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_promotion__dbt_tmp
+  
+   as (
+    
+
+WITH promotion_data AS (
+    SELECT
+        p.value:PromotionID::int AS PromotionID,
+        p.value:PromotionName::string AS PromotionName,
+        p.value:DiscountRate::float AS DiscountRate
+    FROM EMEKA_MARKET_DATA.RAW_SALES_DATA.SALES_DATA,
+    LATERAL FLATTEN(input => Promotion) AS p
+    
+        -- Only get new or updated promotions based on PromotionID
+        WHERE p.value:PromotionID::int > (SELECT MAX(PromotionID) FROM EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_promotion)
+    
+)
+
+-- Deduplicating by PromotionID
+SELECT DISTINCT
+    PromotionID, 
+    PromotionName, 
+    DiscountRate
+FROM promotion_data
+  );
+[0m15:40:22.531344 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:40:23.476462 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.945 seconds
+[0m15:40:23.480454 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_promotion"
+[0m15:40:23.481453 [debug] [Thread-1 (]: On model.dbt_transformations.dim_promotion: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_promotion"} */
+describe table EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_promotion__dbt_tmp
+[0m15:40:23.557361 [debug] [Thread-1 (]: SQL status: SUCCESS 3 in 0.076 seconds
+[0m15:40:23.561338 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_promotion"
+[0m15:40:23.562332 [debug] [Thread-1 (]: On model.dbt_transformations.dim_promotion: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_promotion"} */
+describe table EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_promotion
+[0m15:40:23.635176 [debug] [Thread-1 (]: SQL status: SUCCESS 3 in 0.071 seconds
+[0m15:40:23.639173 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_promotion"
+[0m15:40:23.640170 [debug] [Thread-1 (]: On model.dbt_transformations.dim_promotion: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_promotion"} */
+describe table "EMEKA_MARKET_DATA"."RAW_SALES_DATA"."DIM_PROMOTION"
+[0m15:40:23.703829 [debug] [Thread-1 (]: SQL status: SUCCESS 3 in 0.063 seconds
+[0m15:40:23.709924 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_transformations.dim_promotion"
+[0m15:40:23.711834 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_promotion"
+[0m15:40:23.712828 [debug] [Thread-1 (]: On model.dbt_transformations.dim_promotion: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_promotion"} */
+-- back compat for old kwarg name
+  
+  begin;
+[0m15:40:23.794154 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.080 seconds
+[0m15:40:23.796156 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_promotion"
+[0m15:40:23.798151 [debug] [Thread-1 (]: On model.dbt_transformations.dim_promotion: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_promotion"} */
+merge into EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_promotion as DBT_INTERNAL_DEST
+        using EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_promotion__dbt_tmp as DBT_INTERNAL_SOURCE
+        on (
+                DBT_INTERNAL_SOURCE.PromotionID = DBT_INTERNAL_DEST.PromotionID
+            )
+
+    
+    when matched then update set
+        "PROMOTIONID" = DBT_INTERNAL_SOURCE."PROMOTIONID","PROMOTIONNAME" = DBT_INTERNAL_SOURCE."PROMOTIONNAME","DISCOUNTRATE" = DBT_INTERNAL_SOURCE."DISCOUNTRATE"
+    
+
+    when not matched then insert
+        ("PROMOTIONID", "PROMOTIONNAME", "DISCOUNTRATE")
+    values
+        ("PROMOTIONID", "PROMOTIONNAME", "DISCOUNTRATE")
+
+;
+[0m15:40:24.762187 [debug] [Thread-1 (]: SQL status: SUCCESS 0 in 0.962 seconds
+[0m15:40:24.764085 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_promotion"
+[0m15:40:24.765155 [debug] [Thread-1 (]: On model.dbt_transformations.dim_promotion: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_promotion"} */
+COMMIT
+[0m15:40:24.932191 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.167 seconds
+[0m15:40:24.941185 [debug] [Thread-1 (]: Applying DROP to: EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_promotion__dbt_tmp
+[0m15:40:24.943200 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_promotion"
+[0m15:40:24.943200 [debug] [Thread-1 (]: On model.dbt_transformations.dim_promotion: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_promotion"} */
+drop view if exists EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_promotion__dbt_tmp cascade
+[0m15:40:25.040489 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.096 seconds
+[0m15:40:25.044781 [debug] [Thread-1 (]: On model.dbt_transformations.dim_promotion: Close
+[0m15:40:25.185336 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9c66dcf0-8fb8-4de8-b406-b0d82ee6d4c3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A3E72796F0>]}
+[0m15:40:25.187409 [info ] [Thread-1 (]: 4 of 8 OK created sql incremental model RAW_SALES_DATA.dim_promotion ........... [[32mSUCCESS 0[0m in 2.67s]
+[0m15:40:25.189265 [debug] [Thread-1 (]: Finished running node model.dbt_transformations.dim_promotion
+[0m15:40:25.190350 [debug] [Thread-1 (]: Began running node model.dbt_transformations.dim_review
+[0m15:40:25.191254 [info ] [Thread-1 (]: 5 of 8 START sql incremental model RAW_SALES_DATA.dim_review ................... [RUN]
+[0m15:40:25.192251 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_transformations.dim_promotion, now model.dbt_transformations.dim_review)
+[0m15:40:25.193344 [debug] [Thread-1 (]: Began compiling node model.dbt_transformations.dim_review
+[0m15:40:25.197334 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_transformations.dim_review"
+[0m15:40:25.199254 [debug] [Thread-1 (]: Began executing node model.dbt_transformations.dim_review
+[0m15:40:25.203342 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_review"
+[0m15:40:25.203342 [debug] [Thread-1 (]: On model.dbt_transformations.dim_review: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_review"} */
+create or replace  temporary view EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_review__dbt_tmp
+  
+   as (
+    
+
+WITH review_data AS (
+    SELECT
+        r.value:ReviewID::int AS ReviewID,
+        r.value:ProductID::int AS ProductID,
+        r.value:CustomerID::int AS CustomerID,
+        r.value:Rating::int AS Rating,
+        r.value:Comment::string AS Comment
+    FROM EMEKA_MARKET_DATA.RAW_SALES_DATA.SALES_DATA,
+    LATERAL FLATTEN(input => Review) AS r
+    
+        -- Only get new or updated reviews based on ReviewID
+        WHERE r.value:ReviewID::int > (SELECT MAX(ReviewID) FROM EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_review)
+    
+)
+
+-- Deduplicating by ReviewID
+SELECT DISTINCT
+    ReviewID, 
+    ProductID, 
+    CustomerID, 
+    Rating, 
+    Comment
+FROM review_data
+  );
+[0m15:40:25.204250 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:40:26.173713 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.969 seconds
+[0m15:40:26.179708 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_review"
+[0m15:40:26.180707 [debug] [Thread-1 (]: On model.dbt_transformations.dim_review: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_review"} */
+describe table EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_review__dbt_tmp
+[0m15:40:26.259408 [debug] [Thread-1 (]: SQL status: SUCCESS 5 in 0.077 seconds
+[0m15:40:26.266404 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_review"
+[0m15:40:26.267401 [debug] [Thread-1 (]: On model.dbt_transformations.dim_review: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_review"} */
+describe table EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_review
+[0m15:40:26.376316 [debug] [Thread-1 (]: SQL status: SUCCESS 5 in 0.108 seconds
+[0m15:40:26.384323 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_review"
+[0m15:40:26.384323 [debug] [Thread-1 (]: On model.dbt_transformations.dim_review: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_review"} */
+describe table "EMEKA_MARKET_DATA"."RAW_SALES_DATA"."DIM_REVIEW"
+[0m15:40:26.466102 [debug] [Thread-1 (]: SQL status: SUCCESS 5 in 0.080 seconds
+[0m15:40:26.474178 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_transformations.dim_review"
+[0m15:40:26.477185 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_review"
+[0m15:40:26.478184 [debug] [Thread-1 (]: On model.dbt_transformations.dim_review: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_review"} */
+-- back compat for old kwarg name
+  
+  begin;
+[0m15:40:26.585508 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.107 seconds
+[0m15:40:26.587516 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_review"
+[0m15:40:26.589511 [debug] [Thread-1 (]: On model.dbt_transformations.dim_review: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_review"} */
+merge into EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_review as DBT_INTERNAL_DEST
+        using EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_review__dbt_tmp as DBT_INTERNAL_SOURCE
+        on (
+                DBT_INTERNAL_SOURCE.ReviewID = DBT_INTERNAL_DEST.ReviewID
+            )
+
+    
+    when matched then update set
+        "REVIEWID" = DBT_INTERNAL_SOURCE."REVIEWID","PRODUCTID" = DBT_INTERNAL_SOURCE."PRODUCTID","CUSTOMERID" = DBT_INTERNAL_SOURCE."CUSTOMERID","RATING" = DBT_INTERNAL_SOURCE."RATING","COMMENT" = DBT_INTERNAL_SOURCE."COMMENT"
+    
+
+    when not matched then insert
+        ("REVIEWID", "PRODUCTID", "CUSTOMERID", "RATING", "COMMENT")
+    values
+        ("REVIEWID", "PRODUCTID", "CUSTOMERID", "RATING", "COMMENT")
+
+;
+[0m15:40:27.330796 [debug] [Thread-1 (]: SQL status: SUCCESS 0 in 0.740 seconds
+[0m15:40:27.331795 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_review"
+[0m15:40:27.332795 [debug] [Thread-1 (]: On model.dbt_transformations.dim_review: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_review"} */
+COMMIT
+[0m15:40:27.529222 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.195 seconds
+[0m15:40:27.533231 [debug] [Thread-1 (]: Applying DROP to: EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_review__dbt_tmp
+[0m15:40:27.534240 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_review"
+[0m15:40:27.535219 [debug] [Thread-1 (]: On model.dbt_transformations.dim_review: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_review"} */
+drop view if exists EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_review__dbt_tmp cascade
+[0m15:40:27.646189 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.111 seconds
+[0m15:40:27.650115 [debug] [Thread-1 (]: On model.dbt_transformations.dim_review: Close
+[0m15:40:27.806422 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9c66dcf0-8fb8-4de8-b406-b0d82ee6d4c3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A3E93F7670>]}
+[0m15:40:27.808361 [info ] [Thread-1 (]: 5 of 8 OK created sql incremental model RAW_SALES_DATA.dim_review .............. [[32mSUCCESS 0[0m in 2.61s]
+[0m15:40:27.811336 [debug] [Thread-1 (]: Finished running node model.dbt_transformations.dim_review
+[0m15:40:27.811336 [debug] [Thread-1 (]: Began running node model.dbt_transformations.dim_shipping
+[0m15:40:27.813002 [info ] [Thread-1 (]: 6 of 8 START sql incremental model RAW_SALES_DATA.dim_shipping ................. [RUN]
+[0m15:40:27.814742 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_transformations.dim_review, now model.dbt_transformations.dim_shipping)
+[0m15:40:27.814742 [debug] [Thread-1 (]: Began compiling node model.dbt_transformations.dim_shipping
+[0m15:40:27.820739 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_transformations.dim_shipping"
+[0m15:40:27.822748 [debug] [Thread-1 (]: Began executing node model.dbt_transformations.dim_shipping
+[0m15:40:27.827743 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_shipping"
+[0m15:40:27.828742 [debug] [Thread-1 (]: On model.dbt_transformations.dim_shipping: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_shipping"} */
+create or replace  temporary view EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_shipping__dbt_tmp
+  
+   as (
+    
+
+WITH shipping_data AS (
+    SELECT
+        s.value:ShippingID::int AS ShippingID,
+        s.value:Method::string AS Method,
+        s.value:Cost::float AS Cost
+    FROM EMEKA_MARKET_DATA.RAW_SALES_DATA.SALES_DATA,
+    LATERAL FLATTEN(input => Shipping) AS s
+    
+        -- Only get new or updated shipping data based on ShippingID
+        WHERE s.value:ShippingID::int > (SELECT MAX(ShippingID) FROM EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_shipping)
+    
+)
+
+-- Deduplicating by ShippingID
+SELECT DISTINCT
+    ShippingID, 
+    Method, 
+    Cost
+FROM shipping_data
+  );
+[0m15:40:27.829742 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:40:28.518794 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.689 seconds
+[0m15:40:28.525815 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_shipping"
+[0m15:40:28.526796 [debug] [Thread-1 (]: On model.dbt_transformations.dim_shipping: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_shipping"} */
+describe table EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_shipping__dbt_tmp
+[0m15:40:28.610916 [debug] [Thread-1 (]: SQL status: SUCCESS 3 in 0.083 seconds
+[0m15:40:28.616916 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_shipping"
+[0m15:40:28.617905 [debug] [Thread-1 (]: On model.dbt_transformations.dim_shipping: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_shipping"} */
+describe table EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_shipping
+[0m15:40:28.696447 [debug] [Thread-1 (]: SQL status: SUCCESS 3 in 0.078 seconds
+[0m15:40:28.704440 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_shipping"
+[0m15:40:28.704440 [debug] [Thread-1 (]: On model.dbt_transformations.dim_shipping: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_shipping"} */
+describe table "EMEKA_MARKET_DATA"."RAW_SALES_DATA"."DIM_SHIPPING"
+[0m15:40:28.777009 [debug] [Thread-1 (]: SQL status: SUCCESS 3 in 0.071 seconds
+[0m15:40:28.782992 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_transformations.dim_shipping"
+[0m15:40:28.784906 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_shipping"
+[0m15:40:28.785921 [debug] [Thread-1 (]: On model.dbt_transformations.dim_shipping: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_shipping"} */
+-- back compat for old kwarg name
+  
+  begin;
+[0m15:40:28.869039 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.082 seconds
+[0m15:40:28.871041 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_shipping"
+[0m15:40:28.872044 [debug] [Thread-1 (]: On model.dbt_transformations.dim_shipping: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_shipping"} */
+merge into EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_shipping as DBT_INTERNAL_DEST
+        using EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_shipping__dbt_tmp as DBT_INTERNAL_SOURCE
+        on (
+                DBT_INTERNAL_SOURCE.ShippingID = DBT_INTERNAL_DEST.ShippingID
+            )
+
+    
+    when matched then update set
+        "SHIPPINGID" = DBT_INTERNAL_SOURCE."SHIPPINGID","METHOD" = DBT_INTERNAL_SOURCE."METHOD","COST" = DBT_INTERNAL_SOURCE."COST"
+    
+
+    when not matched then insert
+        ("SHIPPINGID", "METHOD", "COST")
+    values
+        ("SHIPPINGID", "METHOD", "COST")
+
+;
+[0m15:40:29.385046 [debug] [Thread-1 (]: SQL status: SUCCESS 0 in 0.512 seconds
+[0m15:40:29.388058 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_shipping"
+[0m15:40:29.389037 [debug] [Thread-1 (]: On model.dbt_transformations.dim_shipping: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_shipping"} */
+COMMIT
+[0m15:40:29.558186 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.168 seconds
+[0m15:40:29.562276 [debug] [Thread-1 (]: Applying DROP to: EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_shipping__dbt_tmp
+[0m15:40:29.563186 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_shipping"
+[0m15:40:29.564275 [debug] [Thread-1 (]: On model.dbt_transformations.dim_shipping: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_shipping"} */
+drop view if exists EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_shipping__dbt_tmp cascade
+[0m15:40:29.672787 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.108 seconds
+[0m15:40:29.675780 [debug] [Thread-1 (]: On model.dbt_transformations.dim_shipping: Close
+[0m15:40:29.821299 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9c66dcf0-8fb8-4de8-b406-b0d82ee6d4c3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A3E71FF2B0>]}
+[0m15:40:29.822299 [info ] [Thread-1 (]: 6 of 8 OK created sql incremental model RAW_SALES_DATA.dim_shipping ............ [[32mSUCCESS 0[0m in 2.01s]
+[0m15:40:29.824806 [debug] [Thread-1 (]: Finished running node model.dbt_transformations.dim_shipping
+[0m15:40:29.824806 [debug] [Thread-1 (]: Began running node model.dbt_transformations.fact_sales
+[0m15:40:29.826835 [info ] [Thread-1 (]: 7 of 8 START sql incremental model RAW_SALES_DATA.fact_sales ................... [RUN]
+[0m15:40:29.827801 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_transformations.dim_shipping, now model.dbt_transformations.fact_sales)
+[0m15:40:29.828839 [debug] [Thread-1 (]: Began compiling node model.dbt_transformations.fact_sales
+[0m15:40:29.833899 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_transformations.fact_sales"
+[0m15:40:29.835803 [debug] [Thread-1 (]: Began executing node model.dbt_transformations.fact_sales
+[0m15:40:29.841888 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.fact_sales"
+[0m15:40:29.841888 [debug] [Thread-1 (]: On model.dbt_transformations.fact_sales: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.fact_sales"} */
+create or replace  temporary view EMEKA_MARKET_DATA.RAW_SALES_DATA.fact_sales__dbt_tmp
+  
+   as (
+    
+
+WITH sales_data AS (
+    -- Get the necessary fields from the raw sales data
+    SELECT
+        SaleID,
+        Quantity,
+        SaleDate,
+        LocationID,
+        CustomerID,
+        ProductID,
+        PromotionID,
+        ShippingID,
+        ReviewID
+    FROM EMEKA_MARKET_DATA.RAW_SALES_DATA.SALES_DATA
+    
+        -- Only get new or updated sales based on SaleID
+        WHERE SaleID > (SELECT MAX(SaleID) FROM EMEKA_MARKET_DATA.RAW_SALES_DATA.fact_sales)
+    
+),
+
+product_data AS (
+    -- Get the necessary fields from the product dimension table
+    SELECT
+        p.ProductID,
+        p.UnitCost,
+        p.UnitPrice
+    FROM EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_product AS p
+)
+
+-- Join the sales data with the product data to calculate total cost, revenue, and profit
+SELECT 
+    s.SaleID,
+    s.Quantity,
+    s.SaleDate,
+    s.LocationID,
+    s.CustomerID,
+    s.ProductID,
+    s.PromotionID,
+    s.ShippingID,
+    s.ReviewID,
+    (s.Quantity * p.UnitPrice) AS total_revenue,
+    (s.Quantity * p.UnitCost) AS total_cost,
+    ((s.Quantity * p.UnitPrice) - (s.Quantity * p.UnitCost)) AS total_profit
+FROM sales_data s
+JOIN product_data p
+    ON s.ProductID = p.ProductID
+  );
+[0m15:40:29.842882 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:40:30.568719 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.726 seconds
+[0m15:40:30.574721 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.fact_sales"
+[0m15:40:30.574721 [debug] [Thread-1 (]: On model.dbt_transformations.fact_sales: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.fact_sales"} */
+describe table EMEKA_MARKET_DATA.RAW_SALES_DATA.fact_sales__dbt_tmp
+[0m15:40:30.686136 [debug] [Thread-1 (]: SQL status: SUCCESS 12 in 0.110 seconds
+[0m15:40:30.693046 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.fact_sales"
+[0m15:40:30.694043 [debug] [Thread-1 (]: On model.dbt_transformations.fact_sales: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.fact_sales"} */
+describe table EMEKA_MARKET_DATA.RAW_SALES_DATA.fact_sales
+[0m15:40:30.786398 [debug] [Thread-1 (]: SQL status: SUCCESS 12 in 0.092 seconds
+[0m15:40:30.794390 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.fact_sales"
+[0m15:40:30.795392 [debug] [Thread-1 (]: On model.dbt_transformations.fact_sales: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.fact_sales"} */
+describe table "EMEKA_MARKET_DATA"."RAW_SALES_DATA"."FACT_SALES"
+[0m15:40:30.874411 [debug] [Thread-1 (]: SQL status: SUCCESS 12 in 0.078 seconds
+[0m15:40:30.882421 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_transformations.fact_sales"
+[0m15:40:30.885315 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.fact_sales"
+[0m15:40:30.885315 [debug] [Thread-1 (]: On model.dbt_transformations.fact_sales: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.fact_sales"} */
+-- back compat for old kwarg name
+  
+  begin;
+[0m15:40:30.997650 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.110 seconds
+[0m15:40:30.998652 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.fact_sales"
+[0m15:40:31.000647 [debug] [Thread-1 (]: On model.dbt_transformations.fact_sales: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.fact_sales"} */
+merge into EMEKA_MARKET_DATA.RAW_SALES_DATA.fact_sales as DBT_INTERNAL_DEST
+        using EMEKA_MARKET_DATA.RAW_SALES_DATA.fact_sales__dbt_tmp as DBT_INTERNAL_SOURCE
+        on (
+                DBT_INTERNAL_SOURCE.SaleID = DBT_INTERNAL_DEST.SaleID
+            )
+
+    
+    when matched then update set
+        "SALEID" = DBT_INTERNAL_SOURCE."SALEID","QUANTITY" = DBT_INTERNAL_SOURCE."QUANTITY","SALEDATE" = DBT_INTERNAL_SOURCE."SALEDATE","LOCATIONID" = DBT_INTERNAL_SOURCE."LOCATIONID","CUSTOMERID" = DBT_INTERNAL_SOURCE."CUSTOMERID","PRODUCTID" = DBT_INTERNAL_SOURCE."PRODUCTID","PROMOTIONID" = DBT_INTERNAL_SOURCE."PROMOTIONID","SHIPPINGID" = DBT_INTERNAL_SOURCE."SHIPPINGID","REVIEWID" = DBT_INTERNAL_SOURCE."REVIEWID","TOTAL_REVENUE" = DBT_INTERNAL_SOURCE."TOTAL_REVENUE","TOTAL_COST" = DBT_INTERNAL_SOURCE."TOTAL_COST","TOTAL_PROFIT" = DBT_INTERNAL_SOURCE."TOTAL_PROFIT"
+    
+
+    when not matched then insert
+        ("SALEID", "QUANTITY", "SALEDATE", "LOCATIONID", "CUSTOMERID", "PRODUCTID", "PROMOTIONID", "SHIPPINGID", "REVIEWID", "TOTAL_REVENUE", "TOTAL_COST", "TOTAL_PROFIT")
+    values
+        ("SALEID", "QUANTITY", "SALEDATE", "LOCATIONID", "CUSTOMERID", "PRODUCTID", "PROMOTIONID", "SHIPPINGID", "REVIEWID", "TOTAL_REVENUE", "TOTAL_COST", "TOTAL_PROFIT")
+
+;
+[0m15:40:31.534421 [debug] [Thread-1 (]: SQL status: SUCCESS 0 in 0.532 seconds
+[0m15:40:31.537333 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.fact_sales"
+[0m15:40:31.538425 [debug] [Thread-1 (]: On model.dbt_transformations.fact_sales: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.fact_sales"} */
+COMMIT
+[0m15:40:31.743944 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.204 seconds
+[0m15:40:31.749033 [debug] [Thread-1 (]: Applying DROP to: EMEKA_MARKET_DATA.RAW_SALES_DATA.fact_sales__dbt_tmp
+[0m15:40:31.750954 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.fact_sales"
+[0m15:40:31.750954 [debug] [Thread-1 (]: On model.dbt_transformations.fact_sales: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.fact_sales"} */
+drop view if exists EMEKA_MARKET_DATA.RAW_SALES_DATA.fact_sales__dbt_tmp cascade
+[0m15:40:31.913190 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.161 seconds
+[0m15:40:31.918183 [debug] [Thread-1 (]: On model.dbt_transformations.fact_sales: Close
+[0m15:40:32.089722 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9c66dcf0-8fb8-4de8-b406-b0d82ee6d4c3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A3E92C0AF0>]}
+[0m15:40:32.091709 [info ] [Thread-1 (]: 7 of 8 OK created sql incremental model RAW_SALES_DATA.fact_sales .............. [[32mSUCCESS 0[0m in 2.26s]
+[0m15:40:32.094631 [debug] [Thread-1 (]: Finished running node model.dbt_transformations.fact_sales
+[0m15:40:32.096084 [debug] [Thread-1 (]: Began running node model.dbt_transformations.dim_profit_cost
+[0m15:40:32.098096 [info ] [Thread-1 (]: 8 of 8 START sql table model RAW_SALES_DATA.dim_profit_cost .................... [RUN]
+[0m15:40:32.098753 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_transformations.fact_sales, now model.dbt_transformations.dim_profit_cost)
+[0m15:40:32.100247 [debug] [Thread-1 (]: Began compiling node model.dbt_transformations.dim_profit_cost
+[0m15:40:32.105343 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_transformations.dim_profit_cost"
+[0m15:40:32.106270 [debug] [Thread-1 (]: Began executing node model.dbt_transformations.dim_profit_cost
+[0m15:40:32.126356 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_transformations.dim_profit_cost"
+[0m15:40:32.128253 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_transformations.dim_profit_cost"
+[0m15:40:32.129358 [debug] [Thread-1 (]: On model.dbt_transformations.dim_profit_cost: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "model.dbt_transformations.dim_profit_cost"} */
+create or replace transient table EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_profit_cost
+         as
+        (
+
+WITH sales_data AS (
+    -- Get the necessary fields from the sales fact table
+    SELECT
+        ProductID,
+        SUM(Quantity) AS total_quantity
+    FROM EMEKA_MARKET_DATA.RAW_SALES_DATA.fact_sales
+    GROUP BY ProductID
+),
+
+product_data AS (
+    -- Get the necessary fields from the product dimension table
+    SELECT
+        ProductID,
+        UnitCost,
+        UnitPrice
+    FROM EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_product
+)
+
+-- Join the sales data with the product data to calculate total cost, revenue, and profit
+SELECT 
+    p.ProductID,
+    s.total_quantity,
+    (s.total_quantity * p.UnitPrice) AS total_revenue,
+    (s.total_quantity * p.UnitCost) AS total_cost,
+    ((s.total_quantity * p.UnitPrice) - (s.total_quantity * p.UnitCost)) AS total_profit
+FROM sales_data s
+JOIN product_data p
+    ON s.ProductID = p.ProductID
+        );
+[0m15:40:32.130254 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:40:33.271228 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.141 seconds
+[0m15:40:33.279189 [debug] [Thread-1 (]: On model.dbt_transformations.dim_profit_cost: Close
+[0m15:40:33.400523 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9c66dcf0-8fb8-4de8-b406-b0d82ee6d4c3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A3E9183FA0>]}
+[0m15:40:33.401417 [info ] [Thread-1 (]: 8 of 8 OK created sql table model RAW_SALES_DATA.dim_profit_cost ............... [[32mSUCCESS 1[0m in 1.30s]
+[0m15:40:33.403421 [debug] [Thread-1 (]: Finished running node model.dbt_transformations.dim_profit_cost
+[0m15:40:33.405416 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:40:33.406416 [debug] [MainThread]: Connection 'list_EMEKA_MARKET_DATA' was properly closed.
+[0m15:40:33.406416 [debug] [MainThread]: Connection 'list_EMEKA_MARKET_DATA_RAW_SALES_DATA' was properly closed.
+[0m15:40:33.407415 [debug] [MainThread]: Connection 'model.dbt_transformations.dim_profit_cost' was properly closed.
+[0m15:40:33.408416 [info ] [MainThread]: 
+[0m15:40:33.409415 [info ] [MainThread]: Finished running 7 incremental models, 1 table model in 0 hours 0 minutes and 19.97 seconds (19.97s).
+[0m15:40:33.413415 [debug] [MainThread]: Command end result
+[0m15:40:33.463195 [info ] [MainThread]: 
+[0m15:40:33.465184 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m15:40:33.466186 [info ] [MainThread]: 
+[0m15:40:33.467185 [info ] [MainThread]: Done. PASS=8 WARN=0 ERROR=0 SKIP=0 TOTAL=8
+[0m15:40:33.469181 [debug] [MainThread]: Command `dbt run` succeeded at 15:40:33.469181 after 21.58 seconds
+[0m15:40:33.470182 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A3E53263E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A3E672B2B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A3E6666140>]}
+[0m15:40:33.471181 [debug] [MainThread]: Flushing usage events
+[0m15:40:34.073585 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:11:23.809772 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000247BE976380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000247C08FBAC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000247C08FBCA0>]}
+
+
+============================== 16:11:23.814441 | cfae044a-a85a-4457-8f20-b3192a277e4c ==============================
+[0m16:11:23.814441 [info ] [MainThread]: Running with dbt=1.9.0-b1
+[0m16:11:23.815439 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\User\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'C:\\Users\\User\\Desktop\\dbt-Transformations\\logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m16:11:23.846722 [info ] [MainThread]: dbt version: 1.9.0-b1
+[0m16:11:23.847718 [info ] [MainThread]: python version: 3.10.7
+[0m16:11:23.847718 [info ] [MainThread]: python path: C:\Users\User\Desktop\dbt-Transformations\dbt-env\Scripts\python.exe
+[0m16:11:23.848704 [info ] [MainThread]: os info: Windows-10-10.0.22631-SP0
+[0m16:11:24.284721 [info ] [MainThread]: Using profiles dir at C:\Users\User\.dbt
+[0m16:11:24.285888 [info ] [MainThread]: Using profiles.yml file at C:\Users\User\.dbt\profiles.yml
+[0m16:11:24.286896 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\User\Desktop\dbt-Transformations\dbt_project.yml
+[0m16:11:24.288194 [info ] [MainThread]: adapter type: snowflake
+[0m16:11:24.289252 [info ] [MainThread]: adapter version: 1.8.3
+[0m16:11:24.392288 [info ] [MainThread]: Configuration:
+[0m16:11:24.393683 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:11:24.394705 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m16:11:24.395588 [info ] [MainThread]: Required dependencies:
+[0m16:11:24.396602 [debug] [MainThread]: Executing "git --help"
+[0m16:11:24.421038 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m16:11:24.422178 [debug] [MainThread]: STDERR: "b''"
+[0m16:11:24.423041 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m16:11:24.423723 [info ] [MainThread]: Connection:
+[0m16:11:24.424728 [info ] [MainThread]:   account: bc81969.eu-north-1.aws
+[0m16:11:24.425730 [info ] [MainThread]:   user: ChuquEmeka
+[0m16:11:24.426731 [info ] [MainThread]:   database: EMEKA_MARKET_DATA
+[0m16:11:24.428195 [info ] [MainThread]:   warehouse: my_dbt_warehouse
+[0m16:11:24.428195 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m16:11:24.429202 [info ] [MainThread]:   schema: RAW_SALES_DATA
+[0m16:11:24.432651 [info ] [MainThread]:   authenticator: None
+[0m16:11:24.434654 [info ] [MainThread]:   oauth_client_id: None
+[0m16:11:24.436228 [info ] [MainThread]:   query_tag: None
+[0m16:11:24.438174 [info ] [MainThread]:   client_session_keep_alive: False
+[0m16:11:24.439214 [info ] [MainThread]:   host: None
+[0m16:11:24.441164 [info ] [MainThread]:   port: None
+[0m16:11:24.442167 [info ] [MainThread]:   proxy_host: None
+[0m16:11:24.444161 [info ] [MainThread]:   proxy_port: None
+[0m16:11:24.445172 [info ] [MainThread]:   protocol: None
+[0m16:11:24.446161 [info ] [MainThread]:   connect_retries: 1
+[0m16:11:24.447166 [info ] [MainThread]:   connect_timeout: None
+[0m16:11:24.447166 [info ] [MainThread]:   retry_on_database_errors: False
+[0m16:11:24.449161 [info ] [MainThread]:   retry_all: False
+[0m16:11:24.450160 [info ] [MainThread]:   insecure_mode: False
+[0m16:11:24.452163 [info ] [MainThread]:   reuse_connections: None
+[0m16:11:24.453163 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m16:11:24.455162 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m16:11:24.457163 [debug] [MainThread]: Using snowflake connection "debug"
+[0m16:11:24.457163 [debug] [MainThread]: On debug: select 1 as id
+[0m16:11:24.458163 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:11:25.368709 [debug] [MainThread]: SQL status: SUCCESS 1 in 0.910 seconds
+[0m16:11:25.369632 [debug] [MainThread]: On debug: Close
+[0m16:11:25.500747 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m16:11:25.502649 [info ] [MainThread]: [32mAll checks passed![0m
+[0m16:11:25.504711 [debug] [MainThread]: Command `dbt debug` succeeded at 16:11:25.504711 after 1.79 seconds
+[0m16:11:25.505650 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m16:11:25.507657 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000247BE976380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000247C157AE60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000247BED16A70>]}
+[0m16:11:25.508649 [debug] [MainThread]: Flushing usage events
+[0m16:11:26.126173 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:11:34.170749 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024929AC63B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002492B9F12A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002492B9F10C0>]}
+
+
+============================== 16:11:34.178063 | 7b086817-4f41-45f8-9c63-fe0f62ba041e ==============================
+[0m16:11:34.178063 [info ] [MainThread]: Running with dbt=1.9.0-b1
+[0m16:11:34.178994 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'C:\\Users\\User\\Desktop\\dbt-Transformations\\logs', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\User\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt test', 'send_anonymous_usage_stats': 'True'}
+[0m16:11:34.717360 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7b086817-4f41-45f8-9c63-fe0f62ba041e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002492C74D120>]}
+[0m16:11:34.778934 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7b086817-4f41-45f8-9c63-fe0f62ba041e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002492C69FD00>]}
+[0m16:11:34.781898 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m16:11:34.791851 [debug] [MainThread]: checksum: 342eadeaabeb3b1e51584f606df2b5b2518c39ec1d5d83f52b4bb1c68a4f38ed, vars: {}, profile: , target: , version: 1.9.0b1
+[0m16:11:34.996043 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m16:11:34.996043 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m16:11:35.092873 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7b086817-4f41-45f8-9c63-fe0f62ba041e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002492B9F0400>]}
+[0m16:11:35.313671 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7b086817-4f41-45f8-9c63-fe0f62ba041e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002492B9E5750>]}
+[0m16:11:35.314649 [info ] [MainThread]: Found 8 models, 14 data tests, 1 source, 454 macros
+[0m16:11:35.315645 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7b086817-4f41-45f8-9c63-fe0f62ba041e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002492B9E7850>]}
+[0m16:11:35.317644 [info ] [MainThread]: 
+[0m16:11:35.318633 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m16:11:35.319636 [info ] [MainThread]: 
+[0m16:11:35.321635 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m16:11:35.330644 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_EMEKA_MARKET_DATA_RAW_SALES_DATA'
+[0m16:11:35.349674 [debug] [ThreadPool]: Using snowflake connection "list_EMEKA_MARKET_DATA_RAW_SALES_DATA"
+[0m16:11:35.350728 [debug] [ThreadPool]: On list_EMEKA_MARKET_DATA_RAW_SALES_DATA: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "connection_name": "list_EMEKA_MARKET_DATA_RAW_SALES_DATA"} */
+show objects in EMEKA_MARKET_DATA.RAW_SALES_DATA limit 10000
+[0m16:11:35.350728 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:11:36.380737 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 1.030 seconds
+[0m16:11:36.384829 [debug] [ThreadPool]: On list_EMEKA_MARKET_DATA_RAW_SALES_DATA: Close
+[0m16:11:36.534517 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7b086817-4f41-45f8-9c63-fe0f62ba041e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002492B9E6230>]}
+[0m16:11:36.539551 [debug] [Thread-1 (]: Began running node test.dbt_transformations.not_null_dim_customer_CUSTOMERID.de260112ff
+[0m16:11:36.539551 [info ] [Thread-1 (]: 1 of 14 START test not_null_dim_customer_CUSTOMERID ............................ [RUN]
+[0m16:11:36.541518 [debug] [Thread-1 (]: Acquiring new snowflake connection 'test.dbt_transformations.not_null_dim_customer_CUSTOMERID.de260112ff'
+[0m16:11:36.541518 [debug] [Thread-1 (]: Began compiling node test.dbt_transformations.not_null_dim_customer_CUSTOMERID.de260112ff
+[0m16:11:36.558600 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_transformations.not_null_dim_customer_CUSTOMERID.de260112ff"
+[0m16:11:36.562812 [debug] [Thread-1 (]: Began executing node test.dbt_transformations.not_null_dim_customer_CUSTOMERID.de260112ff
+[0m16:11:36.583898 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_transformations.not_null_dim_customer_CUSTOMERID.de260112ff"
+[0m16:11:36.586798 [debug] [Thread-1 (]: Using snowflake connection "test.dbt_transformations.not_null_dim_customer_CUSTOMERID.de260112ff"
+[0m16:11:36.586798 [debug] [Thread-1 (]: On test.dbt_transformations.not_null_dim_customer_CUSTOMERID.de260112ff: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "test.dbt_transformations.not_null_dim_customer_CUSTOMERID.de260112ff"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select CUSTOMERID
+from EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_customer
+where CUSTOMERID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m16:11:36.588797 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m16:11:37.875216 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.286 seconds
+[0m16:11:37.889339 [debug] [Thread-1 (]: On test.dbt_transformations.not_null_dim_customer_CUSTOMERID.de260112ff: Close
+[0m16:11:38.016789 [info ] [Thread-1 (]: 1 of 14 PASS not_null_dim_customer_CUSTOMERID .................................. [[32mPASS[0m in 1.48s]
+[0m16:11:38.018793 [debug] [Thread-1 (]: Finished running node test.dbt_transformations.not_null_dim_customer_CUSTOMERID.de260112ff
+[0m16:11:38.019791 [debug] [Thread-1 (]: Began running node test.dbt_transformations.not_null_dim_location_LocationID.85a6e4f060
+[0m16:11:38.020796 [info ] [Thread-1 (]: 2 of 14 START test not_null_dim_location_LocationID ............................ [RUN]
+[0m16:11:38.021795 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_transformations.not_null_dim_customer_CUSTOMERID.de260112ff, now test.dbt_transformations.not_null_dim_location_LocationID.85a6e4f060)
+[0m16:11:38.022791 [debug] [Thread-1 (]: Began compiling node test.dbt_transformations.not_null_dim_location_LocationID.85a6e4f060
+[0m16:11:38.031474 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_transformations.not_null_dim_location_LocationID.85a6e4f060"
+[0m16:11:38.037473 [debug] [Thread-1 (]: Began executing node test.dbt_transformations.not_null_dim_location_LocationID.85a6e4f060
+[0m16:11:38.041470 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_transformations.not_null_dim_location_LocationID.85a6e4f060"
+[0m16:11:38.045594 [debug] [Thread-1 (]: Using snowflake connection "test.dbt_transformations.not_null_dim_location_LocationID.85a6e4f060"
+[0m16:11:38.046592 [debug] [Thread-1 (]: On test.dbt_transformations.not_null_dim_location_LocationID.85a6e4f060: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "test.dbt_transformations.not_null_dim_location_LocationID.85a6e4f060"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select LocationID
+from EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_location
+where LocationID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m16:11:38.048029 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:11:38.976787 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.928 seconds
+[0m16:11:38.980796 [debug] [Thread-1 (]: On test.dbt_transformations.not_null_dim_location_LocationID.85a6e4f060: Close
+[0m16:11:39.139541 [info ] [Thread-1 (]: 2 of 14 PASS not_null_dim_location_LocationID .................................. [[32mPASS[0m in 1.12s]
+[0m16:11:39.141533 [debug] [Thread-1 (]: Finished running node test.dbt_transformations.not_null_dim_location_LocationID.85a6e4f060
+[0m16:11:39.142627 [debug] [Thread-1 (]: Began running node test.dbt_transformations.not_null_dim_product_ProductID.70d7926aa0
+[0m16:11:39.143528 [info ] [Thread-1 (]: 3 of 14 START test not_null_dim_product_ProductID .............................. [RUN]
+[0m16:11:39.144543 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_transformations.not_null_dim_location_LocationID.85a6e4f060, now test.dbt_transformations.not_null_dim_product_ProductID.70d7926aa0)
+[0m16:11:39.145674 [debug] [Thread-1 (]: Began compiling node test.dbt_transformations.not_null_dim_product_ProductID.70d7926aa0
+[0m16:11:39.150544 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_transformations.not_null_dim_product_ProductID.70d7926aa0"
+[0m16:11:39.152564 [debug] [Thread-1 (]: Began executing node test.dbt_transformations.not_null_dim_product_ProductID.70d7926aa0
+[0m16:11:39.155637 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_transformations.not_null_dim_product_ProductID.70d7926aa0"
+[0m16:11:39.157547 [debug] [Thread-1 (]: Using snowflake connection "test.dbt_transformations.not_null_dim_product_ProductID.70d7926aa0"
+[0m16:11:39.158552 [debug] [Thread-1 (]: On test.dbt_transformations.not_null_dim_product_ProductID.70d7926aa0: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "test.dbt_transformations.not_null_dim_product_ProductID.70d7926aa0"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select ProductID
+from EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_product
+where ProductID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m16:11:39.160544 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:11:39.933269 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.774 seconds
+[0m16:11:39.936308 [debug] [Thread-1 (]: On test.dbt_transformations.not_null_dim_product_ProductID.70d7926aa0: Close
+[0m16:11:40.054622 [info ] [Thread-1 (]: 3 of 14 PASS not_null_dim_product_ProductID .................................... [[32mPASS[0m in 0.91s]
+[0m16:11:40.057649 [debug] [Thread-1 (]: Finished running node test.dbt_transformations.not_null_dim_product_ProductID.70d7926aa0
+[0m16:11:40.059641 [debug] [Thread-1 (]: Began running node test.dbt_transformations.not_null_dim_promotion_PromotionID.85de2a4b57
+[0m16:11:40.061653 [info ] [Thread-1 (]: 4 of 14 START test not_null_dim_promotion_PromotionID .......................... [RUN]
+[0m16:11:40.064639 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_transformations.not_null_dim_product_ProductID.70d7926aa0, now test.dbt_transformations.not_null_dim_promotion_PromotionID.85de2a4b57)
+[0m16:11:40.065639 [debug] [Thread-1 (]: Began compiling node test.dbt_transformations.not_null_dim_promotion_PromotionID.85de2a4b57
+[0m16:11:40.073638 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_transformations.not_null_dim_promotion_PromotionID.85de2a4b57"
+[0m16:11:40.115761 [debug] [Thread-1 (]: Began executing node test.dbt_transformations.not_null_dim_promotion_PromotionID.85de2a4b57
+[0m16:11:40.122839 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_transformations.not_null_dim_promotion_PromotionID.85de2a4b57"
+[0m16:11:40.124756 [debug] [Thread-1 (]: Using snowflake connection "test.dbt_transformations.not_null_dim_promotion_PromotionID.85de2a4b57"
+[0m16:11:40.125752 [debug] [Thread-1 (]: On test.dbt_transformations.not_null_dim_promotion_PromotionID.85de2a4b57: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "test.dbt_transformations.not_null_dim_promotion_PromotionID.85de2a4b57"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select PromotionID
+from EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_promotion
+where PromotionID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m16:11:40.126749 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:11:40.981137 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.854 seconds
+[0m16:11:40.985136 [debug] [Thread-1 (]: On test.dbt_transformations.not_null_dim_promotion_PromotionID.85de2a4b57: Close
+[0m16:11:41.096041 [info ] [Thread-1 (]: 4 of 14 PASS not_null_dim_promotion_PromotionID ................................ [[32mPASS[0m in 1.03s]
+[0m16:11:41.098041 [debug] [Thread-1 (]: Finished running node test.dbt_transformations.not_null_dim_promotion_PromotionID.85de2a4b57
+[0m16:11:41.099038 [debug] [Thread-1 (]: Began running node test.dbt_transformations.not_null_dim_review_ReviewID.2ed03a9f7b
+[0m16:11:41.100032 [info ] [Thread-1 (]: 5 of 14 START test not_null_dim_review_ReviewID ................................ [RUN]
+[0m16:11:41.101032 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_transformations.not_null_dim_promotion_PromotionID.85de2a4b57, now test.dbt_transformations.not_null_dim_review_ReviewID.2ed03a9f7b)
+[0m16:11:41.102031 [debug] [Thread-1 (]: Began compiling node test.dbt_transformations.not_null_dim_review_ReviewID.2ed03a9f7b
+[0m16:11:41.107025 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_transformations.not_null_dim_review_ReviewID.2ed03a9f7b"
+[0m16:11:41.112465 [debug] [Thread-1 (]: Began executing node test.dbt_transformations.not_null_dim_review_ReviewID.2ed03a9f7b
+[0m16:11:41.117658 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_transformations.not_null_dim_review_ReviewID.2ed03a9f7b"
+[0m16:11:41.120664 [debug] [Thread-1 (]: Using snowflake connection "test.dbt_transformations.not_null_dim_review_ReviewID.2ed03a9f7b"
+[0m16:11:41.121657 [debug] [Thread-1 (]: On test.dbt_transformations.not_null_dim_review_ReviewID.2ed03a9f7b: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "test.dbt_transformations.not_null_dim_review_ReviewID.2ed03a9f7b"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select ReviewID
+from EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_review
+where ReviewID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m16:11:41.121657 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:11:41.760827 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.639 seconds
+[0m16:11:41.762841 [debug] [Thread-1 (]: On test.dbt_transformations.not_null_dim_review_ReviewID.2ed03a9f7b: Close
+[0m16:11:41.888598 [info ] [Thread-1 (]: 5 of 14 PASS not_null_dim_review_ReviewID ...................................... [[32mPASS[0m in 0.79s]
+[0m16:11:41.889595 [debug] [Thread-1 (]: Finished running node test.dbt_transformations.not_null_dim_review_ReviewID.2ed03a9f7b
+[0m16:11:41.890603 [debug] [Thread-1 (]: Began running node test.dbt_transformations.not_null_dim_shipping_ShippingID.8bf32c6b09
+[0m16:11:41.891497 [info ] [Thread-1 (]: 6 of 14 START test not_null_dim_shipping_ShippingID ............................ [RUN]
+[0m16:11:41.893556 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_transformations.not_null_dim_review_ReviewID.2ed03a9f7b, now test.dbt_transformations.not_null_dim_shipping_ShippingID.8bf32c6b09)
+[0m16:11:41.893556 [debug] [Thread-1 (]: Began compiling node test.dbt_transformations.not_null_dim_shipping_ShippingID.8bf32c6b09
+[0m16:11:41.902260 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_transformations.not_null_dim_shipping_ShippingID.8bf32c6b09"
+[0m16:11:41.904259 [debug] [Thread-1 (]: Began executing node test.dbt_transformations.not_null_dim_shipping_ShippingID.8bf32c6b09
+[0m16:11:41.909265 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_transformations.not_null_dim_shipping_ShippingID.8bf32c6b09"
+[0m16:11:41.911269 [debug] [Thread-1 (]: Using snowflake connection "test.dbt_transformations.not_null_dim_shipping_ShippingID.8bf32c6b09"
+[0m16:11:41.912261 [debug] [Thread-1 (]: On test.dbt_transformations.not_null_dim_shipping_ShippingID.8bf32c6b09: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "test.dbt_transformations.not_null_dim_shipping_ShippingID.8bf32c6b09"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select ShippingID
+from EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_shipping
+where ShippingID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m16:11:41.912261 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:11:42.738586 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.826 seconds
+[0m16:11:42.743587 [debug] [Thread-1 (]: On test.dbt_transformations.not_null_dim_shipping_ShippingID.8bf32c6b09: Close
+[0m16:11:42.859842 [info ] [Thread-1 (]: 6 of 14 PASS not_null_dim_shipping_ShippingID .................................. [[32mPASS[0m in 0.97s]
+[0m16:11:42.860840 [debug] [Thread-1 (]: Finished running node test.dbt_transformations.not_null_dim_shipping_ShippingID.8bf32c6b09
+[0m16:11:42.861837 [debug] [Thread-1 (]: Began running node test.dbt_transformations.not_null_fact_sales_SaleID.54675be502
+[0m16:11:42.861837 [info ] [Thread-1 (]: 7 of 14 START test not_null_fact_sales_SaleID .................................. [RUN]
+[0m16:11:42.862840 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_transformations.not_null_dim_shipping_ShippingID.8bf32c6b09, now test.dbt_transformations.not_null_fact_sales_SaleID.54675be502)
+[0m16:11:42.863838 [debug] [Thread-1 (]: Began compiling node test.dbt_transformations.not_null_fact_sales_SaleID.54675be502
+[0m16:11:42.873835 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_transformations.not_null_fact_sales_SaleID.54675be502"
+[0m16:11:42.878848 [debug] [Thread-1 (]: Began executing node test.dbt_transformations.not_null_fact_sales_SaleID.54675be502
+[0m16:11:42.887898 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_transformations.not_null_fact_sales_SaleID.54675be502"
+[0m16:11:42.891480 [debug] [Thread-1 (]: Using snowflake connection "test.dbt_transformations.not_null_fact_sales_SaleID.54675be502"
+[0m16:11:42.892420 [debug] [Thread-1 (]: On test.dbt_transformations.not_null_fact_sales_SaleID.54675be502: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "test.dbt_transformations.not_null_fact_sales_SaleID.54675be502"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select SaleID
+from EMEKA_MARKET_DATA.RAW_SALES_DATA.fact_sales
+where SaleID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m16:11:42.893419 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:11:43.741271 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.848 seconds
+[0m16:11:43.744286 [debug] [Thread-1 (]: On test.dbt_transformations.not_null_fact_sales_SaleID.54675be502: Close
+[0m16:11:43.881777 [info ] [Thread-1 (]: 7 of 14 PASS not_null_fact_sales_SaleID ........................................ [[32mPASS[0m in 1.02s]
+[0m16:11:43.883790 [debug] [Thread-1 (]: Finished running node test.dbt_transformations.not_null_fact_sales_SaleID.54675be502
+[0m16:11:43.884879 [debug] [Thread-1 (]: Began running node test.dbt_transformations.unique_dim_customer_CUSTOMERID.eac252d826
+[0m16:11:43.885882 [info ] [Thread-1 (]: 8 of 14 START test unique_dim_customer_CUSTOMERID .............................. [RUN]
+[0m16:11:43.887788 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_transformations.not_null_fact_sales_SaleID.54675be502, now test.dbt_transformations.unique_dim_customer_CUSTOMERID.eac252d826)
+[0m16:11:43.889214 [debug] [Thread-1 (]: Began compiling node test.dbt_transformations.unique_dim_customer_CUSTOMERID.eac252d826
+[0m16:11:43.902978 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_transformations.unique_dim_customer_CUSTOMERID.eac252d826"
+[0m16:11:43.905979 [debug] [Thread-1 (]: Began executing node test.dbt_transformations.unique_dim_customer_CUSTOMERID.eac252d826
+[0m16:11:43.912096 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_transformations.unique_dim_customer_CUSTOMERID.eac252d826"
+[0m16:11:43.918233 [debug] [Thread-1 (]: Using snowflake connection "test.dbt_transformations.unique_dim_customer_CUSTOMERID.eac252d826"
+[0m16:11:43.919224 [debug] [Thread-1 (]: On test.dbt_transformations.unique_dim_customer_CUSTOMERID.eac252d826: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "test.dbt_transformations.unique_dim_customer_CUSTOMERID.eac252d826"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    CUSTOMERID as unique_field,
+    count(*) as n_records
+
+from EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_customer
+where CUSTOMERID is not null
+group by CUSTOMERID
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m16:11:43.920463 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:11:44.736305 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.816 seconds
+[0m16:11:44.738304 [debug] [Thread-1 (]: On test.dbt_transformations.unique_dim_customer_CUSTOMERID.eac252d826: Close
+[0m16:11:44.889238 [info ] [Thread-1 (]: 8 of 14 PASS unique_dim_customer_CUSTOMERID .................................... [[32mPASS[0m in 1.00s]
+[0m16:11:44.891236 [debug] [Thread-1 (]: Finished running node test.dbt_transformations.unique_dim_customer_CUSTOMERID.eac252d826
+[0m16:11:44.892324 [debug] [Thread-1 (]: Began running node test.dbt_transformations.unique_dim_location_LocationID.03e0e3743d
+[0m16:11:44.893235 [info ] [Thread-1 (]: 9 of 14 START test unique_dim_location_LocationID .............................. [RUN]
+[0m16:11:44.895245 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_transformations.unique_dim_customer_CUSTOMERID.eac252d826, now test.dbt_transformations.unique_dim_location_LocationID.03e0e3743d)
+[0m16:11:44.896274 [debug] [Thread-1 (]: Began compiling node test.dbt_transformations.unique_dim_location_LocationID.03e0e3743d
+[0m16:11:44.905250 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_transformations.unique_dim_location_LocationID.03e0e3743d"
+[0m16:11:44.907239 [debug] [Thread-1 (]: Began executing node test.dbt_transformations.unique_dim_location_LocationID.03e0e3743d
+[0m16:11:44.910941 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_transformations.unique_dim_location_LocationID.03e0e3743d"
+[0m16:11:44.916186 [debug] [Thread-1 (]: Using snowflake connection "test.dbt_transformations.unique_dim_location_LocationID.03e0e3743d"
+[0m16:11:44.917128 [debug] [Thread-1 (]: On test.dbt_transformations.unique_dim_location_LocationID.03e0e3743d: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "test.dbt_transformations.unique_dim_location_LocationID.03e0e3743d"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    LocationID as unique_field,
+    count(*) as n_records
+
+from EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_location
+where LocationID is not null
+group by LocationID
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m16:11:44.917128 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:11:45.845501 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.928 seconds
+[0m16:11:45.849507 [debug] [Thread-1 (]: On test.dbt_transformations.unique_dim_location_LocationID.03e0e3743d: Close
+[0m16:11:45.964976 [info ] [Thread-1 (]: 9 of 14 PASS unique_dim_location_LocationID .................................... [[32mPASS[0m in 1.07s]
+[0m16:11:45.966984 [debug] [Thread-1 (]: Finished running node test.dbt_transformations.unique_dim_location_LocationID.03e0e3743d
+[0m16:11:45.967981 [debug] [Thread-1 (]: Began running node test.dbt_transformations.unique_dim_product_ProductID.c7b837bf0d
+[0m16:11:45.967981 [info ] [Thread-1 (]: 10 of 14 START test unique_dim_product_ProductID ............................... [RUN]
+[0m16:11:45.969979 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_transformations.unique_dim_location_LocationID.03e0e3743d, now test.dbt_transformations.unique_dim_product_ProductID.c7b837bf0d)
+[0m16:11:45.969979 [debug] [Thread-1 (]: Began compiling node test.dbt_transformations.unique_dim_product_ProductID.c7b837bf0d
+[0m16:11:45.975059 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_transformations.unique_dim_product_ProductID.c7b837bf0d"
+[0m16:11:45.980023 [debug] [Thread-1 (]: Began executing node test.dbt_transformations.unique_dim_product_ProductID.c7b837bf0d
+[0m16:11:45.984990 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_transformations.unique_dim_product_ProductID.c7b837bf0d"
+[0m16:11:45.988980 [debug] [Thread-1 (]: Using snowflake connection "test.dbt_transformations.unique_dim_product_ProductID.c7b837bf0d"
+[0m16:11:45.989986 [debug] [Thread-1 (]: On test.dbt_transformations.unique_dim_product_ProductID.c7b837bf0d: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "test.dbt_transformations.unique_dim_product_ProductID.c7b837bf0d"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    ProductID as unique_field,
+    count(*) as n_records
+
+from EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_product
+where ProductID is not null
+group by ProductID
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m16:11:45.991067 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:11:46.803791 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.812 seconds
+[0m16:11:46.805775 [debug] [Thread-1 (]: On test.dbt_transformations.unique_dim_product_ProductID.c7b837bf0d: Close
+[0m16:11:46.918855 [info ] [Thread-1 (]: 10 of 14 PASS unique_dim_product_ProductID ..................................... [[32mPASS[0m in 0.95s]
+[0m16:11:46.919855 [debug] [Thread-1 (]: Finished running node test.dbt_transformations.unique_dim_product_ProductID.c7b837bf0d
+[0m16:11:46.920856 [debug] [Thread-1 (]: Began running node test.dbt_transformations.unique_dim_promotion_PromotionID.0c5046d383
+[0m16:11:46.921866 [info ] [Thread-1 (]: 11 of 14 START test unique_dim_promotion_PromotionID ........................... [RUN]
+[0m16:11:46.921866 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_transformations.unique_dim_product_ProductID.c7b837bf0d, now test.dbt_transformations.unique_dim_promotion_PromotionID.0c5046d383)
+[0m16:11:46.922858 [debug] [Thread-1 (]: Began compiling node test.dbt_transformations.unique_dim_promotion_PromotionID.0c5046d383
+[0m16:11:46.926855 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_transformations.unique_dim_promotion_PromotionID.0c5046d383"
+[0m16:11:46.928859 [debug] [Thread-1 (]: Began executing node test.dbt_transformations.unique_dim_promotion_PromotionID.0c5046d383
+[0m16:11:46.932857 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_transformations.unique_dim_promotion_PromotionID.0c5046d383"
+[0m16:11:46.940853 [debug] [Thread-1 (]: Using snowflake connection "test.dbt_transformations.unique_dim_promotion_PromotionID.0c5046d383"
+[0m16:11:46.941957 [debug] [Thread-1 (]: On test.dbt_transformations.unique_dim_promotion_PromotionID.0c5046d383: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "test.dbt_transformations.unique_dim_promotion_PromotionID.0c5046d383"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    PromotionID as unique_field,
+    count(*) as n_records
+
+from EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_promotion
+where PromotionID is not null
+group by PromotionID
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m16:11:46.941957 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:11:47.958982 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.016 seconds
+[0m16:11:47.961928 [debug] [Thread-1 (]: On test.dbt_transformations.unique_dim_promotion_PromotionID.0c5046d383: Close
+[0m16:11:48.092436 [info ] [Thread-1 (]: 11 of 14 PASS unique_dim_promotion_PromotionID ................................. [[32mPASS[0m in 1.17s]
+[0m16:11:48.096003 [debug] [Thread-1 (]: Finished running node test.dbt_transformations.unique_dim_promotion_PromotionID.0c5046d383
+[0m16:11:48.096003 [debug] [Thread-1 (]: Began running node test.dbt_transformations.unique_dim_review_ReviewID.056ef0d8d2
+[0m16:11:48.098011 [info ] [Thread-1 (]: 12 of 14 START test unique_dim_review_ReviewID ................................. [RUN]
+[0m16:11:48.100065 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_transformations.unique_dim_promotion_PromotionID.0c5046d383, now test.dbt_transformations.unique_dim_review_ReviewID.056ef0d8d2)
+[0m16:11:48.101011 [debug] [Thread-1 (]: Began compiling node test.dbt_transformations.unique_dim_review_ReviewID.056ef0d8d2
+[0m16:11:48.106020 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_transformations.unique_dim_review_ReviewID.056ef0d8d2"
+[0m16:11:48.110018 [debug] [Thread-1 (]: Began executing node test.dbt_transformations.unique_dim_review_ReviewID.056ef0d8d2
+[0m16:11:48.118375 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_transformations.unique_dim_review_ReviewID.056ef0d8d2"
+[0m16:11:48.120709 [debug] [Thread-1 (]: Using snowflake connection "test.dbt_transformations.unique_dim_review_ReviewID.056ef0d8d2"
+[0m16:11:48.121720 [debug] [Thread-1 (]: On test.dbt_transformations.unique_dim_review_ReviewID.056ef0d8d2: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "test.dbt_transformations.unique_dim_review_ReviewID.056ef0d8d2"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    ReviewID as unique_field,
+    count(*) as n_records
+
+from EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_review
+where ReviewID is not null
+group by ReviewID
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m16:11:48.122718 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:11:48.834109 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.711 seconds
+[0m16:11:48.838185 [debug] [Thread-1 (]: On test.dbt_transformations.unique_dim_review_ReviewID.056ef0d8d2: Close
+[0m16:11:48.977767 [info ] [Thread-1 (]: 12 of 14 PASS unique_dim_review_ReviewID ....................................... [[32mPASS[0m in 0.88s]
+[0m16:11:48.980582 [debug] [Thread-1 (]: Finished running node test.dbt_transformations.unique_dim_review_ReviewID.056ef0d8d2
+[0m16:11:48.981574 [debug] [Thread-1 (]: Began running node test.dbt_transformations.unique_dim_shipping_ShippingID.71b80a8d63
+[0m16:11:48.982572 [info ] [Thread-1 (]: 13 of 14 START test unique_dim_shipping_ShippingID ............................. [RUN]
+[0m16:11:48.983293 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_transformations.unique_dim_review_ReviewID.056ef0d8d2, now test.dbt_transformations.unique_dim_shipping_ShippingID.71b80a8d63)
+[0m16:11:48.984305 [debug] [Thread-1 (]: Began compiling node test.dbt_transformations.unique_dim_shipping_ShippingID.71b80a8d63
+[0m16:11:48.988392 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_transformations.unique_dim_shipping_ShippingID.71b80a8d63"
+[0m16:11:48.993311 [debug] [Thread-1 (]: Began executing node test.dbt_transformations.unique_dim_shipping_ShippingID.71b80a8d63
+[0m16:11:48.997695 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_transformations.unique_dim_shipping_ShippingID.71b80a8d63"
+[0m16:11:48.999766 [debug] [Thread-1 (]: Using snowflake connection "test.dbt_transformations.unique_dim_shipping_ShippingID.71b80a8d63"
+[0m16:11:49.000741 [debug] [Thread-1 (]: On test.dbt_transformations.unique_dim_shipping_ShippingID.71b80a8d63: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "test.dbt_transformations.unique_dim_shipping_ShippingID.71b80a8d63"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    ShippingID as unique_field,
+    count(*) as n_records
+
+from EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_shipping
+where ShippingID is not null
+group by ShippingID
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m16:11:49.001695 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:11:49.797689 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.796 seconds
+[0m16:11:49.802689 [debug] [Thread-1 (]: On test.dbt_transformations.unique_dim_shipping_ShippingID.71b80a8d63: Close
+[0m16:11:49.936047 [info ] [Thread-1 (]: 13 of 14 PASS unique_dim_shipping_ShippingID ................................... [[32mPASS[0m in 0.95s]
+[0m16:11:49.939147 [debug] [Thread-1 (]: Finished running node test.dbt_transformations.unique_dim_shipping_ShippingID.71b80a8d63
+[0m16:11:49.940132 [debug] [Thread-1 (]: Began running node test.dbt_transformations.unique_fact_sales_SaleID.4dff664d13
+[0m16:11:49.941037 [info ] [Thread-1 (]: 14 of 14 START test unique_fact_sales_SaleID ................................... [RUN]
+[0m16:11:49.943072 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_transformations.unique_dim_shipping_ShippingID.71b80a8d63, now test.dbt_transformations.unique_fact_sales_SaleID.4dff664d13)
+[0m16:11:49.944037 [debug] [Thread-1 (]: Began compiling node test.dbt_transformations.unique_fact_sales_SaleID.4dff664d13
+[0m16:11:49.949041 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_transformations.unique_fact_sales_SaleID.4dff664d13"
+[0m16:11:49.954064 [debug] [Thread-1 (]: Began executing node test.dbt_transformations.unique_fact_sales_SaleID.4dff664d13
+[0m16:11:49.961161 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_transformations.unique_fact_sales_SaleID.4dff664d13"
+[0m16:11:49.963087 [debug] [Thread-1 (]: Using snowflake connection "test.dbt_transformations.unique_fact_sales_SaleID.4dff664d13"
+[0m16:11:49.965076 [debug] [Thread-1 (]: On test.dbt_transformations.unique_fact_sales_SaleID.4dff664d13: /* {"app": "dbt", "dbt_version": "1.9.0b1", "profile_name": "emekamarkt", "target_name": "dev", "node_id": "test.dbt_transformations.unique_fact_sales_SaleID.4dff664d13"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    SaleID as unique_field,
+    count(*) as n_records
+
+from EMEKA_MARKET_DATA.RAW_SALES_DATA.fact_sales
+where SaleID is not null
+group by SaleID
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m16:11:49.965076 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:11:50.852039 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.887 seconds
+[0m16:11:50.855034 [debug] [Thread-1 (]: On test.dbt_transformations.unique_fact_sales_SaleID.4dff664d13: Close
+[0m16:11:51.011941 [info ] [Thread-1 (]: 14 of 14 PASS unique_fact_sales_SaleID ......................................... [[32mPASS[0m in 1.07s]
+[0m16:11:51.015034 [debug] [Thread-1 (]: Finished running node test.dbt_transformations.unique_fact_sales_SaleID.4dff664d13
+[0m16:11:51.016936 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:11:51.017937 [debug] [MainThread]: Connection 'list_EMEKA_MARKET_DATA_RAW_SALES_DATA' was properly closed.
+[0m16:11:51.018945 [debug] [MainThread]: Connection 'test.dbt_transformations.unique_fact_sales_SaleID.4dff664d13' was properly closed.
+[0m16:11:51.019938 [info ] [MainThread]: 
+[0m16:11:51.020934 [info ] [MainThread]: Finished running 14 data tests in 0 hours 0 minutes and 15.70 seconds (15.70s).
+[0m16:11:51.025316 [debug] [MainThread]: Command end result
+[0m16:11:51.067319 [info ] [MainThread]: 
+[0m16:11:51.068314 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:11:51.070320 [info ] [MainThread]: 
+[0m16:11:51.071314 [info ] [MainThread]: Done. PASS=14 WARN=0 ERROR=0 SKIP=0 TOTAL=14
+[0m16:11:51.073385 [debug] [MainThread]: Command `dbt test` succeeded at 16:11:51.073385 after 16.98 seconds
+[0m16:11:51.073385 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024929AC63B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002492C64FC40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002492AE37B80>]}
+[0m16:11:51.074414 [debug] [MainThread]: Flushing usage events
+[0m16:11:51.593302 [debug] [MainThread]: An error was encountered while trying to flush usage events

@@ -1,5 +1,6 @@
 {{ config(
-    materialized='table'
+    materialized='incremental',
+    unique_key='CustomerID'
 ) }}
 
 WITH customer_data AS (
@@ -11,6 +12,10 @@ WITH customer_data AS (
         c.value:LoyaltyStatus::string AS LoyaltyStatus
     FROM {{ source('emeka_market_data', 'SALES_DATA') }},
     LATERAL FLATTEN(input => Customer) AS c
+    {% if is_incremental() %}
+        -- Only get new or updated customers based on CustomerID or another timestamp
+        WHERE c.value:CustomerID::int > (SELECT MAX(CustomerID) FROM {{ this }})
+    {% endif %}
 )
 
 SELECT DISTINCT

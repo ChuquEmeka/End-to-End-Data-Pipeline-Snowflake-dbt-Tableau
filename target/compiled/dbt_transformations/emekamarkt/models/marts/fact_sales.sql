@@ -13,6 +13,10 @@ WITH sales_data AS (
         ShippingID,
         ReviewID
     FROM EMEKA_MARKET_DATA.RAW_SALES_DATA.SALES_DATA
+    
+        -- Only get new or updated sales based on SaleID
+        WHERE SaleID > (SELECT MAX(SaleID) FROM EMEKA_MARKET_DATA.RAW_SALES_DATA.fact_sales)
+    
 ),
 
 product_data AS (

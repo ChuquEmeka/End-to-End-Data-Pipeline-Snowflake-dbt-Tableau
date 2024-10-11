@@ -1,29 +1,30 @@
-
+-- back compat for old kwarg name
   
+  begin;
+    
+        
+            
+            
+        
     
 
-        create or replace transient table EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_location
-         as
-        (
+    
 
-WITH location_data AS (
-    SELECT
-        l.value:LocationID::int AS LocationID,
-        l.value:Country::string AS Country,
-        l.value:City::string AS City,
-        l.value:PostalCode::string AS PostalCode,
-        l.value:Region::string AS Region
-    FROM EMEKA_MARKET_DATA.RAW_SALES_DATA.SALES_DATA,
-    LATERAL FLATTEN(input => Location) AS l
-)
--- Deduplicating by LocationID
-SELECT DISTINCT (LocationID) 
-    LocationID, 
-    Country, 
-    City, 
-    PostalCode, 
-    Region
-FROM location_data
-        );
-      
-  
+    merge into EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_location as DBT_INTERNAL_DEST
+        using EMEKA_MARKET_DATA.RAW_SALES_DATA.dim_location__dbt_tmp as DBT_INTERNAL_SOURCE
+        on (
+                DBT_INTERNAL_SOURCE.LocationID = DBT_INTERNAL_DEST.LocationID
+            )
+
+    
+    when matched then update set
+        "LOCATIONID" = DBT_INTERNAL_SOURCE."LOCATIONID","COUNTRY" = DBT_INTERNAL_SOURCE."COUNTRY","CITY" = DBT_INTERNAL_SOURCE."CITY","POSTALCODE" = DBT_INTERNAL_SOURCE."POSTALCODE","REGION" = DBT_INTERNAL_SOURCE."REGION"
+    
+
+    when not matched then insert
+        ("LOCATIONID", "COUNTRY", "CITY", "POSTALCODE", "REGION")
+    values
+        ("LOCATIONID", "COUNTRY", "CITY", "POSTALCODE", "REGION")
+
+;
+    commit;
