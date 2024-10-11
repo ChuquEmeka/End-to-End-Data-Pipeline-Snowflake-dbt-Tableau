@@ -1,0 +1,42 @@
+name: dbt CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  dbt-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      
+      - name: Install dbt
+        run: |
+          pip install dbt-snowflake
+      
+      - name: Set up environment variables
+        env:
+          SNOWFLAKE_USER: ${{ secrets.SNOWFLAKE_USER }}
+          SNOWFLAKE_PASSWORD: ${{ secrets.SNOWFLAKE_PASSWORD }}
+        run: echo "Environment variables set"
+
+      - name: Run dbt debug
+        run: dbt debug
+
+      - name: Run dbt tests
+        run: dbt test
+
+      - name: Run dbt transformations
+        if: success()
+        run: dbt run
