@@ -1,0 +1,42 @@
+# dbt_project.yml
+
+name: 'dbt_transformations'  
+version: '1.0.0'
+profile: 'emekamarkt'  # This refers to the profile name in my profiles.yml
+
+# The directory where dbt will look for models
+model-paths: ['emekamarkt/models']
+
+# Configuring the marts folder and default materialization
+models:
+  dbt_transformations:  # The name of my project must match the 'name' above
+  
+    marts:
+      +materialized: view  # You can change this to 'table' if you'd prefer tables
+      fact_sales:
+        +materialized: table  # Fact table should be a table for performance reasons
+      dim_customer:
+        +materialized: view   # Dimension tables can remain as views for flexibility
+      dim_location:
+        +materialized: view
+      dim_product:
+        +materialized: view
+      dim_promotion:
+        +materialized: view
+      dim_shipping:
+        +materialized: view
+      dim_review:
+        +materialized: view
+
+# Specify the folder where dbt should write test and documentation files (optional)
+target-path: "target"
+
+# Path to compiled models (optional)
+clean-targets:
+  - "target"
+  - "dbt_modules"
+
+# Define packages if using external packages (optional)
+# packages:
+#   - package: fishtown-analytics/dbt_utils
+#     version: 0.7.0

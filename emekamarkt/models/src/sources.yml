@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: emeka_market_data
+    database: EMEKA_MARKET_DATA
+    schema: RAW_SALES_DATA
+    tables:
+      - name: SALES_DATA
+        description: "Raw sales data from the EMEKA_MARKET_DATA database."

@@ -1,0 +1,48 @@
+name: dbt Transformation Workflow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  dbt:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+
+      - name: Install dbt
+        run: pip install dbt-snowflake
+
+      - name: Set up dbt profiles
+        run: |
+          mkdir -p ~/.dbt
+          echo "emekamarkt:" > ~/.dbt/profiles.yml
+          echo "  outputs:" >> ~/.dbt/profiles.yml
+          echo "    dev:" >> ~/.dbt/profiles.yml
+          echo "      account: bc81969.eu-north-1.aws" >> ~/.dbt/profiles.yml
+          echo "      database: EMEKA_MARKET_DATA" >> ~/.dbt/profiles.yml
+          echo "      password: '${{ secrets.SNOWFLAKE_PASSWORD }}'" >> ~/.dbt/profiles.yml
+          echo "      role: ACCOUNTADMIN" >> ~/.dbt/profiles.yml
+          echo "      schema: RAW_SALES_DATA" >> ~/.dbt/profiles.yml
+          echo "      threads: 1" >> ~/.dbt/profiles.yml
+          echo "      type: snowflake" >> ~/.dbt/profiles.yml
+          echo "      user: '${{ secrets.SNOWFLAKE_USER }}'" >> ~/.dbt/profiles.yml
+          echo "      warehouse: my_dbt_warehouse" >> ~/.dbt/profiles.yml
+          echo "  target: dev" >> ~/.dbt/profiles.yml
+
+      - name: Run dbt debug
+        run: dbt debug
+
+      - name: Run dbt tests
+        run: dbt test
+
+      - name: Run dbt transformations
+        run: dbt run
